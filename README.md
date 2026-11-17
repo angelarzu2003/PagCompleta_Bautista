@@ -17,6 +17,8 @@ productos científicos, reportes, bitácora de auditoría y asistente normativo.
 **Único requisito:** [Node.js](https://nodejs.org) **18.17 o superior** (recomendado 20 LTS o 22 LTS).
 
 ```bash
+git clone https://github.com/angelarzu2003/PagCompleta_Bautista.git
+cd PagCompleta_Bautista
 npm start
 ```
 
