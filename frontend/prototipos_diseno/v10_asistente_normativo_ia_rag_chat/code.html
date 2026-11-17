@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "outline": "#75777e", "warning-text": "#92400e", "on-surface-variant": "#44474d", "on-background": "#0b1c30", "secondary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#00174b", "on-primary": "#ffffff", "success-bg": "#ecfdf5", "surface-container-highest": "#d3e4fe", "on-primary-fixed": "#071c37", "danger-text": "#991b1b", "success-icon": "#059669", "on-tertiary-fixed-variant": "#005137", "primary-fixed": "#d5e3ff", "danger-bg": "#fef2f2", "on-error-container": "#93000a", "bg-base": "#f8f9ff", "surface-container": "#e5eeff", "tertiary": "#000000", "secondary-container": "#346cef", "surface-sunken": "#f1f5f9", "outline-variant": "#c4c6ce", "on-error": "#ffffff", "on-tertiary-fixed": "#002114", "tertiary-fixed-dim": "#68dba9", "background": "#f8f9ff", "primary": "#000000", "primary-container": "#071c37", "surface-bright": "#f8f9ff", "on-primary-container": "#7284a5", "surface-default": "#ffffff", "surface-variant": "#d3e4fe", "secondary": "#0051d5", "secondary-fixed": "#dbe1ff", "warning-border": "#fde68a", "error-container": "#ffdad6", "border-subtle": "#e2e8f0", "on-tertiary": "#ffffff", "danger-icon-container": "#fee2e2", "success-text": "#065f46", "inverse-primary": "#b5c7ea", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#003ea7", "on-secondary": "#ffffff", "warning-bg": "#fffbeb", "on-tertiary-container": "#069669", "inverse-surface": "#213145", "surface-container-low": "#eff4ff", "surface": "#f8f9ff", "primary-fixed-dim": "#b5c7ea", "error": "#ba1a1a", "surface-tint": "#4d5f7d", "surface-elevated": "#e2e8f0", "danger-action": "#dc2626", "tertiary-container": "#002114", "surface-container-high": "#dce9ff", "tertiary-fixed": "#85f8c4", "surface-dim": "#cbdbf5", "on-primary-fixed-variant": "#354765", "on-secondary-container": "#fefcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-2xl": "2.5rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "tech-data-lg": [ "JetBrains Mono" ], "body-md": [ "Plus Jakarta Sans" ], "tech-code": [ "JetBrains Mono" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "tech-data-md": [ "JetBrains Mono" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "tech-data-lg": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "tech-code": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-xl": [ "35px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "500" } ], "headline-xl-mobile": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "tech-data-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "body-lg": [ "17px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-bg-base font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-body-md text-surface-container-lowest tracking-tight leading-tight">URPMP</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug">Gestión Proyectos DGI</span></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-tech-code text-tech-code text-primary-fixed-dim uppercase tracking-wider block mb-space-xs">Navegación del Sistema</span><nav class="space-y-1" data-active-classes="bg-secondary text-on-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="registro-de-propuestas" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Registro de Propuestas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="plan-de-trabajo-y-finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Plan de Trabajo &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="productos-cientificos" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-body-md text-body-md">Productos Científicos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="evaluaciones-y-pares" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-body-md text-body-md">Evaluaciones y Pares</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="resoluciones-rectorales" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Resoluciones Rectorales</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-secondary text-on-secondary font-semibold" data-path="asistente-normativo-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-body-md text-body-md">Asistente Normativo IA</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-highest/10"><div class="flex items-start gap-space-sm"><div class="p-1 rounded-full bg-success-bg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-success-icon text-[18px]">lock</span></div><div class="flex flex-col"><span class="font-tech-code text-tech-code text-surface-container-lowest font-medium uppercase">Integridad Criptográfica</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug mt-1">Consorcio Registral DGI con firma de sellado en bloque activo</span></div></div></div></aside><div class="pl-[280px] min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface-default/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-tech-code text-tech-code font-semibold uppercase">DGI</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-body-sm text-body-sm font-medium text-on-surface">Plataforma Institucional URPMP</span></div><div class="flex-1 max-w-lg mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none transition-all focus:bg-surface-default" placeholder="Buscar normativa, artículo, directiva o expediente..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-danger-action text-on-primary font-tech-code text-[10px] font-bold flex items-center justify-center leading-none">3</span></button><div class="flex items-center gap-space-sm pl-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Roberto Mendoza Vargas</span><span class="font-tech-code text-tech-code text-on-surface-variant leading-tight">Investigador Principal</span></div></div></div></div></header><main class="w-full max-w-[1440px] mx-auto pt-16 px-space-lg flex-1 bg-bg-base"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Status Bar -->
+<div class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm pb-space-md">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-tech-code text-tech-code">
+<a class="hover:text-secondary transition-colors" href="#">Inicio</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-secondary transition-colors" href="#">Asistente Normativo IA</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Consulta Reglamentaria &amp; RAG</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code font-semibold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-success-icon inline-block animate-pulse"></span>
+        Nodo RAG: Operacional
+      </span>
+<span class="text-on-surface-variant font-tech-code text-tech-code">Latencia Inferencia: 1.18s</span>
+</div>
+</div>
+<!-- Page Header -->
+<header class="w-full pb-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col xl:flex-row xl:items-start justify-between gap-space-md">
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Asistente Normativo IA — Consultor RAG Especializado
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Orientación reglamentaria automatizada con fundamentación en el Estatuto de Investigación, Reglamento DGI y normativas de bioética vigentes.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs shrink-0 pt-1">
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-tech-code text-tech-code text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">database</span>
+          Modelo RAG: Corpus DGI v2.4 (Actualizado Feb 2025)
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-tech-code text-tech-code text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">alt_route</span>
+          Indexación Vectorial: 14 Directivas Activas
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-sunken font-tech-code text-tech-code text-warning-text font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-warning-text">gavel</span>
+          Modo: Orientación No Vinculante (AIR-001/AIR-006)
+        </span>
+</div>
+</div>
+</header>
+<!-- Workspace Grid: Asymmetric 62% / 38% -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MAIN CHAT COLUMN (approx 62%) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Session Context Banner -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">folder_special</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-tech-code text-tech-code font-bold text-on-surface truncate">
+                Expediente Activo Vinculado: PID-2023-CRH-019
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-default font-tech-code text-[11px] text-secondary font-semibold shrink-0">
+                Fase II
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Sensores IoT Altoandinos · Investigador: Dr. Roberto Mendoza Vargas (DNI: ***.***.342)
+            </p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-default text-on-surface hover:bg-surface-sunken transition-colors font-body-sm text-body-sm font-semibold shrink-0 shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+          Cambiar
+        </button>
+</div>
+<!-- Conversation Container -->
+<div class="space-y-space-lg">
+<!-- User Query Bubble -->
+<div class="flex justify-end pl-8">
+<div class="max-w-2xl bg-primary-container text-on-primary rounded-xl rounded-tr-none p-space-lg shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between gap-space-md font-tech-code text-tech-code text-primary-fixed-dim">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">person</span>
+                Dr. Roberto Mendoza Vargas
+              </span>
+<span>Hoy, 10:42 AM</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-surface-container-lowest">
+              ¿Puedo solicitar una ampliación de plazo para el Hito Intermedio de la Fase II considerando demoras en la importación aduanera de sensores LiFePO4 sin incurrir en penalidad presupuestal?
+            </p>
+</div>
+</div>
+<!-- Bot Response Container -->
+<div class="w-full bg-surface-default rounded-xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
+<!-- Bot Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-border-subtle/50">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[19px]">auto_awesome</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-md font-bold text-on-surface flex items-center gap-1.5">
+                  Asistente Normativo DGI
+                  <span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant font-medium">
+                Orientación no vinculante (AIR-001 a AIR-006)
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/60 font-tech-code text-tech-code text-on-primary-fixed-variant font-semibold">
+                Corpus: Art. 38 &amp; 44 Reg. DGI
+              </span>
+</div>
+</div>
+<!-- Section 1: Veredicto Orientativo Breve -->
+<div class="bg-success-bg/60 rounded-lg p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-success-icon text-[22px] shrink-0 mt-0.5">check_circle</span>
+<div class="space-y-0.5">
+<span class="font-headline-sm text-body-sm font-bold text-success-text uppercase tracking-wider block">
+                Dictamen Técnico-Orientativo Preliminar
+              </span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">
+                Sí, procede la solicitud de prórroga extraordinaria por caso fortuito o fuerza mayor documentada, siempre que se formule con al menos 15 días hábiles de anticipación al vencimiento del hito y no comprometa el cierre del ejercicio fiscal.
+              </p>
+</div>
+</div>
+<!-- Section 2: Condiciones Aplicables -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">rule</span>
+              Requisitos y Condiciones Mandatarias de Procedencia
+            </h4>
+<div class="grid grid-cols-1 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-sunken flex items-start gap-space-sm">
+<span class="font-tech-code text-tech-code font-bold text-secondary bg-surface-default w-6 h-6 rounded flex items-center justify-center shrink-0">1</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface font-semibold">Acreditación Aduanera:</strong>
+<span class="font-body-md text-body-md text-on-surface-variant"> Presentar guía aérea (Air Waybill) y comprobante de retención aduanera emitida por SUNAT/Aduanas debidamente visados.</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-sunken flex items-start gap-space-sm">
+<span class="font-tech-code text-tech-code font-bold text-secondary bg-surface-default w-6 h-6 rounded flex items-center justify-center shrink-0">2</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface font-semibold">Límite Temporal:</strong>
+<span class="font-body-md text-body-md text-on-surface-variant"> La prórroga máxima admisible es de hasta 45 días calendario sin penalización presupuestal ni recalificación de riesgo técnico del proyecto.</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-sunken flex items-start gap-space-sm">
+<span class="font-tech-code text-tech-code font-bold text-secondary bg-surface-default w-6 h-6 rounded flex items-center justify-center shrink-0">3</span>
+<div>
+<strong class="font-body-md text-body-md text-on-surface font-semibold">No Afectación de Rubros:</strong>
+<span class="font-body-md text-body-md text-on-surface-variant"> No se permite transferir fondos del rubro Equipamiento a Gastos Operativos sin adenda rectoral previa aprobada por el Vicerrectorado.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Citas Reglamentarias Exactas & Divulgación Progresiva (<TechDetails>) -->
+<div class="rounded-lg bg-surface-sunken overflow-hidden">
+<details class="group">
+<summary class="cursor-pointer list-none p-space-md flex items-center justify-between text-on-surface font-body-sm text-body-sm font-semibold select-none hover:bg-surface-elevated/40 transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+<span>Fundamentación Jurídica y Citas Textuales (3 Artículos Citados)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-tech-code text-tech-code">Coseno: 0.124</span>
+</div>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md space-y-space-sm">
+<!-- Quote 1 -->
+<div class="bg-surface-default p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code font-bold text-secondary">Art. 38º — Reg. General de Subvenciones DGI 2024</span>
+<span class="font-tech-code text-tech-code text-outline">Pág. 47</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                    “De las demoras atribuibles a terceros o trámites de desaduanaje transfronterizo: El Investigador Principal podrá invocar excepción reglamentaria sin devengo punitivo acreditando formalmente el número de despacho y notificación de agente aduanal.”
+                  </p>
+</div>
+<!-- Quote 2 -->
+<div class="bg-surface-default p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code font-bold text-secondary">Art. 44º Inciso B — Resolución Rectoral Nº 0824-2023</span>
+<span class="font-tech-code text-tech-code text-outline">Pág. 12</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                    “El Investigador Principal formulará su solicitud ante la Dirección General de Investigación con al menos 15 días hábiles de anticipación al vencimiento programado del entregable evaluable.”
+                  </p>
+</div>
+<!-- Vector Meta -->
+<div class="p-space-xs bg-surface-container-high/40 rounded flex items-center justify-between font-tech-code text-tech-code text-on-surface-variant">
+<span>Métrica Vectorial: text-embedding-3-large</span>
+<span>Distancia Coseno: 0.124 (Alta correspondencia temática)</span>
+<span class="text-success-text font-semibold">Consistente</span>
+</div>
+</div>
+</details>
+</div>
+<!-- Section 4: Mandatory Legal Disclaimer Footnote -->
+<div class="flex items-start gap-2 text-outline font-tech-code text-tech-code pt-1">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">info</span>
+<p>
+              Esta información es una guía orientativa basada en el Reglamento General de Investigación Art. 38 y Directivas DGI 2024. No constituye resolución legal ni sustituye el pronunciamiento formal de la Comisión Técnica Evaluadora.
+            </p>
+</div>
+<!-- Footer Interactive Action Bar -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm border-t border-border-subtle/50">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-sunken hover:bg-surface-elevated text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-success-icon">thumb_up</span>
+                Útil (Guardar en Notas)
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-sunken hover:bg-surface-elevated text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+                Solicitar Asesoría Humana / Legal DGI
+              </button>
+</div>
+<button class="px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-sunken font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+              Adjuntar a Expediente
+            </button>
+</div>
+</div>
+<!-- Suggested Prompt Chips (Quick Prompts) -->
+<div class="space-y-space-xs">
+<span class="font-tech-code text-tech-code uppercase text-on-surface-variant font-semibold tracking-wider">
+            Consultas Frecuentes Sugeridas:
+          </span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="text-left px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-container font-body-sm text-body-sm text-on-surface shadow-sm transition-colors flex items-center gap-1.5" onclick="setQuery(this.innerText.replace(/[«»]/g, '').trim())" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">quick_phrases</span>
+              ¿Cómo redactar la carta de solicitud de prórroga para la DGI?
+            </button>
+<button class="text-left px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-container font-body-sm text-body-sm text-on-surface shadow-sm transition-colors flex items-center gap-1.5" onclick="setQuery(this.innerText.replace(/[«»]/g, '').trim())" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">quick_phrases</span>
+              ¿Qué porcentaje máximo de viáticos puedo reasignar a materiales de laboratorio?
+            </button>
+<button class="text-left px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-container font-body-sm text-body-sm text-on-surface shadow-sm transition-colors flex items-center gap-1.5" onclick="setQuery(this.innerText.replace(/[«»]/g, '').trim())" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">quick_phrases</span>
+              Requisitos para reemplazo justificado de un co-investigador en Fase II
+            </button>
+</div>
+</div>
+</div>
+<!-- Chat Input Area Container -->
+<div class="w-full bg-surface-default rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="relative">
+<textarea class="w-full p-space-md rounded-lg bg-surface-sunken font-body-md text-body-md text-on-surface placeholder:text-outline outline-none resize-none focus:bg-surface-default transition-all" id="rag-query-input" placeholder="Formula una consulta sobre bases, reglamentos, compras o comités de ética..." rows="3"></textarea>
+<div class="absolute bottom-2 right-3 font-tech-code text-[11px] text-outline" id="char-counter">
+            0 / 500 palabras
+          </div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-2 rounded-lg hover:bg-surface-sunken hover:text-on-surface transition-colors flex items-center justify-center" title="Adjuntar documento probatorio" type="button">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-sunken hover:text-on-surface transition-colors flex items-center justify-center" title="Consulta por voz" type="button">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<span class="h-4 w-[1px] bg-outline-variant/60 mx-1"></span>
+<span class="font-tech-code text-tech-code text-outline hidden sm:inline">
+              Búsqueda semántica híbrida (BM25 + Dense Vectors)
+            </span>
+</div>
+<!-- STRICT RULE: EXACTLY ONE PRIMARY SOLID BLUE CTA BUTTON (#0051d5) PER SCREEN -->
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary text-on-secondary font-body-md text-body-md font-semibold hover:bg-secondary/90 transition-all flex items-center gap-2 shadow-sm" id="submit-rag-query" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+            Consultar Asistente (Enter)
+          </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: PANEL DE FUENTES, REGLAMENTOS Y FILTROS RAG (approx 38%) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Card 1: Fuentes y Reglamentos Activos en el Corpus RAG -->
+<div class="w-full bg-surface-default rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+              Corpus RAG Indexado
+            </h3>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-tech-code text-tech-code font-bold">
+              14 Normas
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Documentación institucional sincronizada con la base vectorial.
+          </p>
+</div>
+<!-- Quick Search input for Corpus -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">filter_list</span>
+<input class="w-full h-9 pl-9 pr-space-md rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none focus:bg-surface-default transition-all" placeholder="Filtrar base de normativas..." type="text"/>
+</div>
+<!-- Filter chips -->
+<div class="flex flex-wrap gap-1.5 pb-1">
+<button class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-tech-code text-tech-code font-semibold" type="button">
+            Todos (14)
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-sunken hover:bg-surface-container text-on-surface-variant font-tech-code text-tech-code transition-colors" type="button">
+            Financieros
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-sunken hover:bg-surface-container text-on-surface-variant font-tech-code text-tech-code transition-colors" type="button">
+            Ética &amp; Bioética
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-sunken hover:bg-surface-container text-on-surface-variant font-tech-code text-tech-code transition-colors" type="button">
+            Directivas 2024-2025
+          </button>
+</div>
+<!-- List of vectorized active documents with status -->
+<div class="space-y-space-xs">
+<!-- Doc 1 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken space-y-1 hover:bg-surface-elevated/60 transition-colors">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">
+                Reglamento General de Investigación DGI 2024-2025
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-[11px] font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                Prioritario
+              </span>
+</div>
+<div class="font-tech-code text-tech-code text-on-surface-variant flex flex-wrap gap-x-2 gap-y-0.5">
+<span>R.R. Nº 1042-2024</span>
+<span>•</span>
+<span>128 pág.</span>
+<span>•</span>
+<span class="text-secondary font-medium">Chunks: 512 tokens</span>
+</div>
+</div>
+<!-- Doc 2 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken space-y-1 hover:bg-surface-elevated/60 transition-colors">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">
+                Directiva de Rendición de Cuentas y Adquisiciones
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-[11px] font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                Activo
+              </span>
+</div>
+<div class="font-tech-code text-tech-code text-on-surface-variant flex flex-wrap gap-x-2 gap-y-0.5">
+<span>DIR-DGI-008-2024</span>
+<span>•</span>
+<span>42 pág.</span>
+<span>•</span>
+<span>Indexado 100%</span>
+</div>
+</div>
+<!-- Doc 3 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken space-y-1 hover:bg-surface-elevated/60 transition-colors">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">
+                Manual del Comité Institucional de Ética y Bioética (CIE)
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-[11px] font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                Activo
+              </span>
+</div>
+<div class="font-tech-code text-tech-code text-on-surface-variant flex flex-wrap gap-x-2 gap-y-0.5">
+<span>CIE-NORM-02</span>
+<span>•</span>
+<span class="text-secondary">Convenio OIT 169 integrado</span>
+</div>
+</div>
+<!-- Doc 4 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken space-y-1 hover:bg-surface-elevated/60 transition-colors">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">
+                Guía de Propiedad Intelectual y Publicaciones Scopus/WoS
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-[11px] font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                Activo
+              </span>
+</div>
+<div class="font-tech-code text-tech-code text-on-surface-variant flex flex-wrap gap-x-2 gap-y-0.5">
+<span>GPI-2024</span>
+<span>•</span>
+<span>26 pág.</span>
+<span>•</span>
+<span>Reconocimientos DGI</span>
+</div>
+</div>
+</div>
+<!-- Secondary Action: Button Outline -->
+<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm" type="button">
+<span>Gestionar Base de Conocimientos (V11)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: Historial de Consultas del Proyecto -->
+<div class="w-full bg-surface-default rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-body-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">history</span>
+            Historial de Consultas del Proyecto
+          </h3>
+<span class="font-tech-code text-tech-code text-outline">PID-2023-CRH-019</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken hover:bg-surface-elevated/60 transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">
+                Rebalanceo de viáticos al 15%
+              </span>
+<span class="px-2 py-0.5 rounded bg-success-bg text-success-text font-tech-code text-[10px] uppercase font-bold shrink-0">
+                Resuelto
+              </span>
+</div>
+<span class="font-tech-code text-[11px] text-on-surface-variant block mt-0.5">
+              28 Feb 2025 · Resp. fundamentada en Art. 22
+            </span>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-sunken hover:bg-surface-elevated/60 transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">
+                Consentimiento comunal en quechua
+              </span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-tech-code text-[10px] uppercase font-bold shrink-0">
+                Validado CIE
+              </span>
+</div>
+<span class="font-tech-code text-[11px] text-on-surface-variant block mt-0.5">
+              26 Feb 2025 · Protocolo ético Nro. CE-044
+            </span>
+</div>
+</div>
+</div>
+<!-- Card 3: Garantía de Imparcialidad Algorítmica -->
+<div class="w-full bg-surface-default rounded-xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface uppercase tracking-wider">
+            Garantía de Imparcialidad Algorítmica
+          </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Algoritmo auditado conforme a la Directiva Nacional de Ética en Inteligencia Artificial y la Ley de Protección de Datos Personales Nº 29733. No se envían datos confidenciales a LLMs públicos externos.
+        </p>
+<div class="pt-1">
+<div class="p-space-sm rounded-lg bg-surface-sunken space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code font-semibold text-on-surface-variant">Hash Integridad de Corpus</span>
+<span class="material-symbols-outlined text-[15px] text-success-icon">lock</span>
+</div>
+<div class="font-tech-code text-tech-code text-on-surface font-semibold bg-surface-default px-2 py-1 rounded truncate select-all">
+              SHA-256: e8b94ca9f012aa784f90117b34d71109a01...771c
+            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setQuery(text) {
+    const textarea = document.getElementById('rag-query-input');
+    if (textarea) {
+      textarea.value = text;
+      textarea.focus();
+      updateCounter();
+    }
+  }
+
+  function updateCounter() {
+    const textarea = document.getElementById('rag-query-input');
+    const counter = document.getElementById('char-counter');
+    if (textarea && counter) {
+      const words = textarea.value.trim().split(/\s+/).filter(Boolean).length;
+      counter.innerText = words + ' / 500 palabras';
+      if (words > 500) {
+        counter.classList.add('text-danger-text');
+        counter.classList.remove('text-outline');
+      } else {
+        counter.classList.remove('text-danger-text');
+        counter.classList.add('text-outline');
+      }
+    }
+  }
+
+  const queryInput = document.getElementById('rag-query-input');
+  if (queryInput) {
+    queryInput.addEventListener('input', updateCounter);
+    queryInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        document.getElementById('submit-rag-query')?.click();
+      }
+    });
+  }
+
+  const submitBtn = document.getElementById('submit-rag-query');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function() {
+      const input = document.getElementById('rag-query-input');
+      if (input && input.value.trim().length > 0) {
+        input.value = '';
+        updateCounter();
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-default shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="w-full max-w-[1440px] mx-auto px-space-lg py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md font-body-sm text-body-sm"><a class="hover:text-secondary transition-colors" href="#">Mesa de Ayuda</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Normativas Académicas</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Términos de Servicio</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Aviso Legal &amp; Privacidad</a></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-success-bg font-tech-code text-tech-code text-success-text uppercase tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>WCAG 2.1 AAA</div><span class="font-tech-code text-tech-code text-outline">© 2025 Vicerrectorado de Investigación - DGI</span></div></div></footer></div></body></html>

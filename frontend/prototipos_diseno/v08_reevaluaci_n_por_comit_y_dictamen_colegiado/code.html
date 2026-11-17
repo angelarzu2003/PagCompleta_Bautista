@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#b5c7ea","surface-elevated":"#e2e8f0","tertiary-container":"#002114","error":"#ba1a1a","outline":"#75777e","on-surface-variant":"#44474d","on-secondary":"#ffffff","bg-base":"#f8f9ff","on-secondary-fixed-variant":"#003ea7","on-tertiary":"#ffffff","surface":"#f8f9ff","on-tertiary-fixed-variant":"#005137","surface-bright":"#f8f9ff","on-primary-container":"#7284a5","tertiary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","surface-dim":"#cbdbf5","on-tertiary-fixed":"#002114","surface-container":"#e5eeff","outline-variant":"#c4c6ce","on-primary-fixed":"#071c37","secondary-fixed":"#dbe1ff","primary-fixed":"#d5e3ff","on-background":"#0b1c30","primary":"#000000","tertiary":"#000000","success-icon":"#059669","surface-container-highest":"#d3e4fe","success-bg":"#ecfdf5","warning-bg":"#fffbeb","primary-container":"#071c37","secondary":"#0051d5","danger-action":"#dc2626","error-container":"#ffdad6","surface-container-high":"#dce9ff","surface-sunken":"#f1f5f9","secondary-fixed-dim":"#b4c5ff","on-primary-fixed-variant":"#354765","inverse-surface":"#213145","on-primary":"#ffffff","on-secondary-container":"#fefcff","border-subtle":"#e2e8f0","secondary-container":"#346cef","on-error":"#ffffff","warning-border":"#fde68a","success-text":"#065f46","on-surface":"#0b1c30","on-secondary-fixed":"#00174b","tertiary-fixed-dim":"#68dba9","background":"#f8f9ff","danger-bg":"#fef2f2","surface-variant":"#d3e4fe","warning-text":"#92400e","surface-container-low":"#eff4ff","surface-tint":"#4d5f7d","danger-icon-container":"#fee2e2","inverse-on-surface":"#eaf1ff","on-error-container":"#93000a","inverse-primary":"#b5c7ea","on-tertiary-container":"#069669","danger-text":"#991b1b","surface-default":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","space-md":"1rem",gutter:"1.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-2xl":"2.5rem","space-lg":"1.5rem",margin:"2.5rem","space-xs":"0.25rem","space-xl":"2rem"},fontFamily:{"headline-lg":["Plus Jakarta Sans"],"tech-code":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"tech-data-lg":["JetBrains Mono"],"tech-data-md":["JetBrains Mono"],"headline-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-lg":["29px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"tech-code":["12px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"500"}],"headline-xl":["35px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["17px",{lineHeight:"26px",fontWeight:"400"}],"tech-data-lg":["20px",{lineHeight:"28px",fontWeight:"600"}],"tech-data-md":["14px",{lineHeight:"20px",fontWeight:"500"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-xl-mobile":["29px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}}</script></head><body class="bg-bg-base font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[280px] bg-[#00142f] z-50 flex flex-col justify-between select-none shadow-[0_4px_16px_-2px_rgba(0,20,47,0.15)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-white/10"><div class="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-on-secondary font-headline-sm text-headline-sm font-bold tracking-tight shadow-sm">U</div><div class="flex flex-col"><span class="text-on-secondary font-headline-sm text-headline-sm font-bold tracking-tight leading-none">URPMP</span><span class="text-white/60 font-body-sm text-body-sm text-[11px] leading-tight">Gestión de Proyectos DGI</span></div></div><div class="px-space-md py-space-sm"><span class="px-space-sm text-[11px] font-tech-code text-tech-code tracking-wider uppercase text-white/40">Navegación del Sistema</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md leading-none">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="registro-de-propuestas" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md leading-none">Registro de Propuestas</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="plan-de-trabajo-y-finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md leading-none">Plan de Trabajo &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="productos-cientificos" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-body-md text-body-md leading-none">Productos Científicos</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="evaluaciones-y-pares" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-body-md text-body-md leading-none">Evaluaciones y Pares</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="resoluciones-rectorales" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md leading-none">Resoluciones Rectorales</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors duration-150" data-path="asistente-normativo-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-body-md text-body-md leading-none">Asistente Normativo IA</span></a></nav></div><div class="p-space-md m-space-md rounded-lg bg-white/5 border border-white/10 flex flex-col gap-1.5"><div class="flex items-center gap-space-xs text-tertiary-fixed"><span class="material-symbols-outlined text-[16px]">lock</span><span class="font-tech-code text-tech-code text-[11px] uppercase tracking-wider font-semibold">Integridad Criptográfica</span></div><p class="font-body-sm text-body-sm text-white/60 text-[11px] leading-relaxed">Consorcio Registral DGI con firma de sellado en bloque activo.</p></div></aside><div class="pl-[280px] flex flex-col min-h-screen"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface-default border-b border-border-subtle z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0 flex-1"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="">DGI</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold truncate">Plataforma Institucional URPMP</span></div><div class="relative flex-1 max-w-xl md:flex hidden"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-sunken border border-border-subtle font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all shadow-sm" placeholder="Buscar proyecto (PID, título, investigador)..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button aria-label="Notificaciones" class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-danger-action text-white font-tech-code text-[10px] font-semibold rounded-full flex items-center justify-center leading-none ring-2 ring-surface-default">3</span></button><div class="h-6 w-[1px] bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight truncate max-w-[190px]">Dr. Roberto Mendoza Vargas</span><span class="font-tech-code text-tech-code text-[11px] text-on-surface-variant leading-tight truncate max-w-[210px]">Investigador Principal</span></div></div></div></header><main class="flex-1 pt-16 bg-bg-base w-full px-space-lg py-space-xl max-w-[1160px] mx-auto"><div class="flex flex-col w-full">
+<!-- Cabecera Institucional y Breadcrumbs Contextuales -->
+<div class="mb-space-lg flex flex-col gap-2">
+<nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<a class="hover:text-secondary transition-colors" href="#">Inicio</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-secondary transition-colors" href="#">Evaluaciones y Pares</a>
+<span class="text-outline-variant">/</span>
+<span class="font-tech-code text-tech-code text-on-surface">PID-2023-CRH-019</span>
+<span class="text-outline-variant">/</span>
+<span class="font-semibold text-on-surface">Reevaluación Colegiada (V08)</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-1">
+<div>
+<div class="flex items-center gap-space-sm flex-wrap mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-white font-tech-code text-[11px] tracking-wide uppercase font-semibold">
+            Exp. #PROP-2025-084-ANON
+          </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-sunken text-on-surface-variant font-tech-code text-[11px] tracking-wide font-medium">
+            Sesión Extraordinaria CIE Nº 014-2025
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-[11px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span>
+            Quórum Colegiado 3/3 Ratificado
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-outline font-tech-code text-[11px]">
+            CVD: URP-9482-TX-2024
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Reevaluación por Comité y Dictamen Colegiado
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Despliegue de Red Telemétrica de Sensores IoT de Bajo Costo para Monitoreo Bioclimático en Cuencas Altoandinas
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-default shadow-sm text-on-surface-variant text-right">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<div class="flex flex-col text-left">
+<span class="font-tech-code text-[10px] text-outline uppercase leading-none">Tribunal de Bioética</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">CIE Universitario Pleno</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Layout Asimétrico 65% / 35% -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA IZQUIERDA (65% del ancho de trabajo) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Resumen de Antecedentes y Subsanación v1.1 -->
+<section class="bg-surface-default rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Subsanación y Conformidad Técnica v1.1</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Revisión colegiada previa de 4 observaciones institucionales</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code font-semibold self-start sm:self-center">
+<span class="material-symbols-outlined text-[16px] text-success-icon">check_circle</span>
+            100% SUBSANACIONES VALIDADAS
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-sunken flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-body-sm text-body-sm font-semibold">1. Protocolo Ético Comunitario</span>
+<span class="material-symbols-outlined text-success-icon text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Consentimiento Informado bilingüe (Quechua Chanka y Castellano) con refrendo del Acta Comunal Nº 04-2024.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-sunken flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-body-sm text-body-sm font-semibold">2. Blindaje y Resguardo Ambiental</span>
+<span class="material-symbols-outlined text-success-icon text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Carcasas herméticas IP68 con resina anticongelante y cálculo de huella nula en ecosistemas de bofedal.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-sunken flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-body-sm text-body-sm font-semibold">3. Rebalanceo Presupuestario</span>
+<span class="material-symbols-outlined text-success-icon text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Ajuste de rubros operativos a S/ 142,500.00 cumpliendo el tope normativo del 15% en viáticos de campo.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-sunken flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-body-sm text-body-sm font-semibold">4. Recomposición de Equipo</span>
+<span class="material-symbols-outlined text-success-icon text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Desvinculación del co-investigador por incompatibilidad horaria DGI y reemplazo por especialista acreditada.
+            </p>
+</div>
+</div>
+</section>
+<!-- Panel de Votación Colegiada Individual (3 Tarjetas Estilizadas) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Registro Oficial de Votación Colegiada</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Emisión de sufragios con validez legal según Art. 48 del Estatuto de Investigación</p>
+</div>
+<span class="font-tech-code text-tech-code text-outline uppercase">3 Sufragios Inscritos</span>
+</div>
+<!-- Vocal 1: Dra. Carmen Valdivia Prado -->
+<article class="bg-surface-default rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-white flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+                CV
+              </div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface">Dra. Carmen Valdivia Prado</h3>
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-tech-code text-[11px] text-on-surface-variant">
+                    Presidenta CIE
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Especialidad: Ética Biomédica &amp; Derechos Indígenas</p>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-bg text-success-text font-tech-code text-[12px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span>
+                APROBADO CON DISPENSA
+              </span>
+<span class="font-tech-code text-[11px] text-outline mt-1">28-FEB-2025 15:42:19 UTC-5</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-sunken">
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Se ratifica la plena conformidad con el Convenio 169 de la OIT tras la incorporación del Acta Comunal Nº 04-2024 debidamente refrendada por las autoridades comunales de Huancavelica. Se otorga la dispensa metodológica de toma invasiva de muestras conforme a los estándares de bioética."
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pt-1">
+<div class="flex items-center gap-1.5 font-tech-code text-[11px] text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[15px] text-secondary">fingerprint</span>
+<span class="text-outline">SHA-256:</span>
+<span class="font-mono text-on-surface truncate max-w-[280px] md:max-w-[420px]">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+</div>
+<span class="inline-flex items-center gap-1 font-tech-code text-[11px] text-success-icon shrink-0">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Firma Digital Validada
+            </span>
+</div>
+</article>
+<!-- Vocal 2: Dr. Hugo Santillana Pinedo -->
+<article class="bg-surface-default rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-lg bg-surface-container text-secondary flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+                HS
+              </div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface">Dr. Hugo Santillana Pinedo</h3>
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-tech-code text-[11px] text-on-surface-variant">
+                    Secretario / Vocal Técnico
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Especialidad: Sensores IoT, Redes Telemétricas y Hardware In situ</p>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-bg text-success-text font-tech-code text-[12px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span>
+                APROBADO
+              </span>
+<span class="font-tech-code text-[11px] text-outline mt-1">28-FEB-2025 15:56:02 UTC-5</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-sunken">
+<p class="font-body-md text-body-md text-on-surface italic">
+              "El blindaje IP68 y la modelación de aislamiento térmico garantizan la viabilidad operativa sin riesgos de congelamiento de batería ni dispersión de electrolitos en el ecosistema. Protocolo de contingencia de fallos validado técnicamente."
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pt-1">
+<div class="flex items-center gap-1.5 font-tech-code text-[11px] text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[15px] text-secondary">fingerprint</span>
+<span class="text-outline">SHA-256:</span>
+<span class="font-mono text-on-surface truncate max-w-[280px] md:max-w-[420px]">8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4</span>
+</div>
+<span class="inline-flex items-center gap-1 font-tech-code text-[11px] text-success-icon shrink-0">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Firma Digital Validada
+            </span>
+</div>
+</article>
+<!-- Vocal 3: Dra. Elena Morales -->
+<article class="bg-surface-default rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-lg bg-surface-container text-secondary flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+                EM
+              </div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface">Dra. Elena Morales</h3>
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-tech-code text-[11px] text-on-surface-variant">
+                    Vocal Metodológica / Bioética
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Especialidad: Metodología Científica e Impacto Ambiental</p>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-bg text-success-text font-tech-code text-[12px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span>
+                APROBADO
+              </span>
+<span class="font-tech-code text-[11px] text-outline mt-1">28-FEB-2025 16:11:45 UTC-5</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-sunken">
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Cumplimiento estricto del protocolo de bioseguridad ambiental y ética comunitaria. La matriz de riesgos contempla el retiro ordenado de nodos telemétricos al término de los 18 meses de ejecución sin remanentes tóxicos."
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pt-1">
+<div class="flex items-center gap-1.5 font-tech-code text-[11px] text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[15px] text-secondary">fingerprint</span>
+<span class="text-outline">SHA-256:</span>
+<span class="font-mono text-on-surface truncate max-w-[280px] md:max-w-[420px]">4a520f86a237a91a92e4e892d11342616f7beea2b8a7f45dd035e4e857ddca8b</span>
+</div>
+<span class="inline-flex items-center gap-1 font-tech-code text-[11px] text-success-icon shrink-0">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Firma Digital Validada
+            </span>
+</div>
+</article>
+</section>
+<!-- Asistente Normativo IA (AIR-001/AIR-006) -->
+<section class="rounded-xl p-space-lg bg-surface-container-low shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary text-white flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-tech-code text-tech-code uppercase font-semibold text-secondary">
+                AIR-001 / AIR-006
+              </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">
+                AI-Assistant (Orientación no vinculante)
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-space-md">
+<strong class="font-semibold text-on-surface">Veredicto orientativo:</strong> Con el quórum 3/3 alcanzado y unanimidad favorable registrada, el expediente cumple rigurosamente con los requisitos del <span class="font-semibold text-secondary underline decoration-secondary/30">Art. 52 del Reglamento General DGI</span> para la emisión del Dictamen Favorable Definitivo previo a la Resolución Rectoral de financiamiento.
+            </p>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold transition-colors shadow-sm" id="ai-useful-btn" onclick="toggleAiUseful(this)" type="button">
+<span class="material-symbols-outlined text-[16px] text-success-icon">thumb_up</span>
+<span>Útil</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-medium transition-colors shadow-sm" onclick="openLegalModal()" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">gavel</span>
+<span>Solicitar Asesoría Humana / Legal</span>
+</button>
+<span class="font-tech-code text-[11px] text-on-surface-variant ml-auto">
+                Modelo DGI-Norm 4.2 • Certificado #IA-8819
+              </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- COLUMNA DERECHA (Panel de Dictamen, Quórum y Firma - 35% ancho) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Tarjeta de Estado de Quórum y Consenso -->
+<section class="bg-surface-default rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-tech-code text-tech-code uppercase text-on-surface-variant tracking-wider font-semibold">
+            ESTADO DEL COLEGIO
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-tech-code text-[11px] text-on-surface font-medium">
+            ACTA-CIE-2025-084
+          </span>
+</div>
+<!-- Indicador Visual de Quórum -->
+<div class="flex flex-col items-center justify-center p-space-md rounded-xl bg-surface-sunken gap-2">
+<div class="relative w-28 h-28 flex items-center justify-center">
+<!-- SVG Donut Chart 3/3 -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-elevated" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-success-icon" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-tech-data-lg text-tech-data-lg text-on-surface leading-none">3 / 3</span>
+<span class="font-tech-code text-[11px] text-on-surface-variant mt-1">100% QUÓRUM</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-success-text">Unanimidad Colegiada Obtenida</span>
+</div>
+<!-- Badge Dictamen Favorable Grande -->
+<div class="p-space-md rounded-xl bg-success-bg flex flex-col items-center text-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[28px] text-success-icon">check_circle</span>
+<span class="font-headline-sm text-[16px] text-success-text font-bold tracking-tight">
+            DICTAMEN ÉTICO FAVORABLE UNÁNIME
+          </span>
+<span class="font-body-sm text-body-sm text-success-text/80 text-[12px]">
+            Conforme para elevación y refrendo rectoral inmediato
+          </span>
+</div>
+<div class="space-y-2 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Tipo de Dictamen:</span>
+<span class="font-semibold text-on-surface">Favorable c/ Dispensa</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Concurrencia:</span>
+<span class="font-tech-code text-[12px] text-on-surface">3 Titulares (Pleno)</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Efectos Legales:</span>
+<span class="font-semibold text-success-icon">Habilitante V09</span>
+</div>
+</div>
+</section>
+<!-- Componente de Divulgación Progresiva (<TechDetails>) -->
+<section class="bg-surface-default rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left hover:bg-surface-sunken transition-colors" onclick="toggleTechDetails()" type="button">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+<span class="font-body-sm text-body-sm font-semibold">Trazabilidad de Seguridad e Integridad</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200" id="accordion-icon">
+            expand_more
+          </span>
+</button>
+<div class="p-space-md bg-surface-sunken flex flex-col gap-space-sm text-left" id="tech-details-content">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-[11px] text-outline uppercase font-semibold">Consorcio Registral DGI</span>
+<span class="px-2 py-0.5 rounded bg-surface-default text-success-icon font-tech-code text-[10px] font-semibold">
+              EN LÍNEA
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-tech-code text-[11px] text-on-surface-variant">Bloque de Ledger Inmutable:</span>
+<div class="px-2.5 py-1.5 rounded bg-surface-default font-tech-code text-[11px] text-on-surface flex items-center justify-between">
+<span>#194,821-CIE-TX</span>
+<button class="text-secondary hover:text-on-surface" onclick="copyHash('194821-CIE-TX', this)" title="Copiar bloque" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-tech-code text-[11px] text-on-surface-variant">Firma Raíz X.509 Autoridad Universitaria:</span>
+<div class="px-2.5 py-1.5 rounded bg-surface-default font-tech-code text-[11px] text-on-surface flex items-center justify-between">
+<span class="truncate mr-2">CN=URP-CA-Root-2025, O=Vicerrectorado de Investigación</span>
+<span class="material-symbols-outlined text-success-icon text-[16px]">verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-tech-code text-[11px] text-on-surface-variant">Estampillado de Tiempo (TSA RFC-3161):</span>
+<div class="px-2.5 py-1.5 rounded bg-surface-default font-tech-code text-[11px] text-on-surface flex items-center justify-between">
+<span class="truncate">2025-02-28T21:11:45.092Z</span>
+<span class="material-symbols-outlined text-outline text-[16px]">schedule</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-tech-code text-[11px] text-on-surface-variant">Merkle Root Hash:</span>
+<div class="px-2.5 py-1.5 rounded bg-surface-default font-tech-code text-[11px] text-on-surface flex items-center justify-between">
+<span class="truncate font-mono mr-2">9f83c120a174826bdf0218b846e...</span>
+<button class="text-secondary hover:text-on-surface" onclick="copyHash('9f83c120a174826bdf0218b846e9102436d1f92e765c5211903ba84f', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bloque de Formalización y Emisión -->
+<section class="bg-surface-default rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Formalización de Dictamen</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Certificación final de la Presidencia del Comité</p>
+</div>
+<!-- Checkbox Ético (Desmarcado por defecto) -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-sunken cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary shrink-0 accent-secondary" id="certification-checkbox" onchange="toggleSubmitButton()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Certifico en mi calidad de Presidenta del Comité de Ética que la votación colegiada ha concluido con las debidas garantías estatutarias, quórum verificado y firma electrónica válida del pleno.
+          </span>
+</label>
+<!-- Acciones: Botón Secundario y ÚNICO CTA PRIMARIO -->
+<div class="flex flex-col gap-space-sm pt-1">
+<button class="w-full h-11 px-space-md rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-space-sm shadow-sm" onclick="downloadDraft()" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Descargar Borrador de Acta (PDF)</span>
+</button>
+<!-- ÚNICO BOTÓN PRIMARIO DE LA PANTALLA (#0051d5) -->
+<button class="w-full h-12 px-space-md rounded-lg bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-sm shadow-sm opacity-50 cursor-not-allowed" disabled="" id="emit-btn" onclick="executeEmission()" type="button">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span>Emitir Dictamen Colegiado y Elevar a Rectorado</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1.5 font-tech-code text-[11px] text-outline text-center">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Acción irreversible bajo custodia en Ledger DGI</span>
+</div>
+</section>
+</div>
+</div>
+<!-- Diálogo Modal: Asesoría Humana Legal (Oculto por defecto) -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-[#00142f]/40 backdrop-blur-sm" id="legal-modal">
+<div class="w-full max-w-lg bg-surface-default rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Consulta a Asesoría Legal DGI</h2>
+</div>
+<button class="w-8 h-8 rounded-lg text-outline hover:text-on-surface flex items-center justify-center" onclick="closeLegalModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Si existe duda interpretativa sobre la dispensa ética o las reservas del Art. 52, puede solicitar audiencia técnica de urgencia con la Dirección de Asesoría Jurídica antes de asentar el dictamen final.
+      </p>
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface" for="legal-notes">Motivo de la interconsulta:</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/20" id="legal-notes" placeholder="Escriba aquí sus observaciones normativas..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-sunken text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-elevated transition-colors" onclick="closeLegalModal()" type="button">
+          Cancelar
+        </button>
+<button class="px-4 py-2 rounded-lg bg-surface-default text-secondary font-body-sm text-body-sm font-semibold hover:bg-surface-sunken transition-colors shadow-sm" onclick="submitLegalConsult()" type="button">
+          Registrar Consulta Legal
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal de Notificación de Emisión Exitosa -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-[#00142f]/50 backdrop-blur-sm" id="success-modal">
+<div class="w-full max-w-md bg-surface-default rounded-xl p-space-lg shadow-xl flex flex-col items-center text-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-success-bg text-success-icon flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dictamen Colegiado Emitido</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          El acta ACTA-CIE-2025-084 ha sido sellada en el bloque inmutable #194,821 y remitida al Despacho Rectoral para la emisión de la Resolución de Financiamiento (Paso V09).
+        </p>
+</div>
+<div class="w-full p-space-sm rounded-lg bg-surface-sunken font-tech-code text-[11px] text-on-surface truncate">
+        Hash Transaccional: 0x9b72...84ea93f2110c
+      </div>
+<button class="w-full py-2.5 rounded-lg bg-secondary text-white font-body-sm text-body-sm font-semibold shadow-sm hover:opacity-90 transition-opacity" onclick="window.location.reload()" type="button">
+        Entendido y Continuar
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function toggleTechDetails() {
+    var content = document.getElementById('tech-details-content');
+    var icon = document.getElementById('accordion-icon');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(-90deg)';
+    }
+  }
+
+  function toggleSubmitButton() {
+    var checkbox = document.getElementById('certification-checkbox');
+    var btn = document.getElementById('emit-btn');
+    if (checkbox.checked) {
+      btn.disabled = false;
+      btn.classList.remove('opacity-50', 'cursor-not-allowed');
+      btn.classList.add('hover:opacity-95', 'shadow-md');
+    } else {
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+      btn.classList.remove('hover:opacity-95', 'shadow-md');
+    }
+  }
+
+  function toggleAiUseful(btn) {
+    var span = btn.querySelector('span:last-child');
+    if (btn.classList.contains('bg-success-bg')) {
+      btn.classList.remove('bg-success-bg', 'text-success-text');
+      btn.classList.add('bg-surface-default', 'text-on-surface');
+      span.textContent = 'Útil';
+    } else {
+      btn.classList.add('bg-success-bg', 'text-success-text');
+      btn.classList.remove('bg-surface-default', 'text-on-surface');
+      span.textContent = 'Agradecido';
+    }
+  }
+
+  function openLegalModal() {
+    document.getElementById('legal-modal').classList.remove('hidden');
+  }
+
+  function closeLegalModal() {
+    document.getElementById('legal-modal').classList.add('hidden');
+  }
+
+  function submitLegalConsult() {
+    closeLegalModal();
+    alert('Consulta elevada a la Dirección de Asesoría Legal con Ticket #LEG-2025-041');
+  }
+
+  function downloadDraft() {
+    alert('Generando borrador refrendado en PDF con código seguro de verificación...');
+  }
+
+  function executeEmission() {
+    var checkbox = document.getElementById('certification-checkbox');
+    if (!checkbox.checked) return;
+    document.getElementById('success-modal').classList.remove('hidden');
+  }
+
+  function copyHash(text, btn) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      var originalIcon = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-success-icon">check</span>';
+      setTimeout(function() {
+        btn.innerHTML = originalIcon;
+      }, 1500);
+    }
+  }
+</script></main><footer class="w-full bg-surface-default border-t border-border-subtle py-space-md px-space-lg"><div class="w-full max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center flex-wrap sm:flex-nowrap gap-x-space-md gap-y-1 font-body-sm text-body-sm"><a class="hover:text-on-surface transition-colors whitespace-nowrap" data-path="mesa-de-ayuda" href="#">Mesa de Ayuda</a><span class="text-outline-variant text-[10px]">•</span><a class="hover:text-on-surface transition-colors whitespace-nowrap" data-path="normativas-academicas" href="#">Normativas Académicas</a><span class="text-outline-variant text-[10px]">•</span><a class="hover:text-on-surface transition-colors whitespace-nowrap" data-path="terminos-de-servicio" href="#">Términos de Servicio</a><span class="text-outline-variant text-[10px]">•</span><a class="hover:text-on-surface transition-colors whitespace-nowrap" data-path="aviso-legal-y-privacidad" href="#">Aviso Legal &amp; Privacidad</a></div><div class="flex flex-wrap items-center gap-space-md shrink-0"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-sunken border border-border-subtle font-tech-code text-[11px] text-on-surface-variant font-medium shrink-0 shadow-sm"><span class="w-2 h-2 rounded-full bg-success-icon shrink-0"></span><span class="leading-none whitespace-nowrap">WCAG 2.1 AAA</span></div><span class="font-body-sm text-body-sm text-outline whitespace-nowrap">© 2025 Vicerrectorado de Investigación - DGI</span></div></div></footer></div>
+</body></html>

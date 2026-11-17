@@ -1,0 +1,23 @@
+{
+  "name": "urpmp-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API REST /api/v1 de la plataforma URPMP (Node.js + Express + SQLite)",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js --reset",
+    "test": "node --test test/api.test.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.3",
+    "multer": "^2.5.0",
+    "sql.js": "^1.16.0"
+  }
+}

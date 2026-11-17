@@ -1,0 +1,10 @@
+services:
+  urpmp:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - urpmp-data:/app/backend/data
+    restart: unless-stopped
+volumes:
+  urpmp-data:

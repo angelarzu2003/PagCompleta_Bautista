@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "outline": "#75777e", "warning-text": "#92400e", "on-surface-variant": "#44474d", "on-background": "#0b1c30", "secondary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#00174b", "on-primary": "#ffffff", "success-bg": "#ecfdf5", "surface-container-highest": "#d3e4fe", "on-primary-fixed": "#071c37", "danger-text": "#991b1b", "success-icon": "#059669", "on-tertiary-fixed-variant": "#005137", "primary-fixed": "#d5e3ff", "danger-bg": "#fef2f2", "on-error-container": "#93000a", "bg-base": "#f8f9ff", "surface-container": "#e5eeff", "tertiary": "#000000", "secondary-container": "#346cef", "surface-sunken": "#f1f5f9", "outline-variant": "#c4c6ce", "on-error": "#ffffff", "on-tertiary-fixed": "#002114", "tertiary-fixed-dim": "#68dba9", "background": "#f8f9ff", "primary": "#000000", "primary-container": "#071c37", "surface-bright": "#f8f9ff", "on-primary-container": "#7284a5", "surface-default": "#ffffff", "surface-variant": "#d3e4fe", "secondary": "#0051d5", "secondary-fixed": "#dbe1ff", "warning-border": "#fde68a", "error-container": "#ffdad6", "border-subtle": "#e2e8f0", "on-tertiary": "#ffffff", "danger-icon-container": "#fee2e2", "success-text": "#065f46", "inverse-primary": "#b5c7ea", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#003ea7", "on-secondary": "#ffffff", "warning-bg": "#fffbeb", "on-tertiary-container": "#069669", "inverse-surface": "#213145", "surface-container-low": "#eff4ff", "surface": "#f8f9ff", "primary-fixed-dim": "#b5c7ea", "error": "#ba1a1a", "surface-tint": "#4d5f7d", "surface-elevated": "#e2e8f0", "danger-action": "#dc2626", "tertiary-container": "#002114", "surface-container-high": "#dce9ff", "tertiary-fixed": "#85f8c4", "surface-dim": "#cbdbf5", "on-primary-fixed-variant": "#354765", "on-secondary-container": "#fefcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-2xl": "2.5rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "tech-data-lg": [ "JetBrains Mono" ], "body-md": [ "Plus Jakarta Sans" ], "tech-code": [ "JetBrains Mono" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "tech-data-md": [ "JetBrains Mono" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "tech-data-lg": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "tech-code": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-xl": [ "35px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "500" } ], "headline-xl-mobile": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "tech-data-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "body-lg": [ "17px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-bg-base font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-body-md text-surface-container-lowest tracking-tight leading-tight">URPMP</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug">Gestión Proyectos DGI</span></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-tech-code text-tech-code text-primary-fixed-dim uppercase tracking-wider block mb-space-xs">Navegación del Sistema</span><nav class="space-y-1" data-active-classes="bg-secondary text-on-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="registro-de-propuestas" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Registro de Propuestas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="plan-de-trabajo-y-finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Plan de Trabajo &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="productos-cientificos" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-body-md text-body-md">Productos Científicos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="evaluaciones-y-pares" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-body-md text-body-md">Evaluaciones y Pares</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="resoluciones-rectorales" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Resoluciones Rectorales</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="asistente-normativo-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-body-md text-body-md">Asistente Normativo IA</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-highest/10"><div class="flex items-start gap-space-sm"><div class="p-1 rounded-full bg-success-bg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-success-icon text-[18px]">lock</span></div><div class="flex flex-col"><span class="font-tech-code text-tech-code text-surface-container-lowest font-medium uppercase">Integridad Criptográfica</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug mt-1">Consorcio Registral DGI con firma de sellado en bloque activo</span></div></div></div></aside><div class="pl-[280px] min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface-default/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-tech-code text-tech-code font-semibold uppercase">DGI</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-body-sm text-body-sm font-medium text-on-surface">Plataforma Institucional URPMP</span></div><div class="flex-1 max-w-lg mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none transition-all focus:bg-surface-default" placeholder="Buscar normativa, artículo, directiva o expediente..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-danger-action text-on-primary font-tech-code text-[10px] font-bold flex items-center justify-center leading-none">3</span></button><div class="flex items-center gap-space-sm pl-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Roberto Mendoza Vargas</span><span class="font-tech-code text-tech-code text-on-surface-variant leading-tight">Investigador Principal</span></div></div></div></div></header><main class="w-full max-w-[1440px] mx-auto pt-16 px-space-lg flex-1 bg-bg-base"><div class="flex flex-col w-full pb-space-2xl space-y-space-xl">
+<!-- ENCABEZADO Y BREADCRUMB INSTITUCIONAL -->
+<section class="flex flex-col gap-space-md">
+<!-- Breadcrumb de Auditoría -->
+<nav aria-label="Ruta de navegación" class="flex items-center gap-space-xs text-on-surface-variant font-tech-code text-tech-code">
+<span class="hover:text-secondary cursor-pointer transition-colors">Inicio</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer transition-colors">Asistente Normativo IA</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Gestión de Base de Conocimientos (V11)</span>
+<span class="ml-space-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold">FR-045 / AIR-004</span>
+</nav>
+<!-- Título y Acciones de Cabecera -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col space-y-1 max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Gestión de Base de Conocimientos — Corpus IA RAG
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Administración, ingesta documental y trazabilidad vectorial de normativas, directivas y resoluciones académicas oficiales para el motor de inferencia institucional.
+        </p>
+</div>
+<!-- Acciones de Cabecera Secundarias -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-default text-on-surface font-body-sm text-body-sm font-semibold shadow-sm hover:bg-surface-sunken transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span>Reindexar Corpus Completo</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-default text-on-surface font-body-sm text-body-sm font-semibold shadow-sm hover:bg-surface-sunken transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">history_edu</span>
+<span>Auditoría de Ingesta (Audit Log)</span>
+</button>
+</div>
+</div>
+<!-- Tira de Badges de Estado Operativo del Motor -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success-icon animate-pulse"></span>
+<span class="font-semibold">Motor RAG: ChromaDB / pgvector Sincronizado</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-default text-on-surface font-tech-code text-tech-code shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">dataset</span>
+<span>Chunks Indexados: <strong class="text-on-surface">4,892 fragmentos vectoriales</strong></span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-default text-on-surface font-tech-code text-tech-code shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">polyline</span>
+<span>Dimensión Embedding: <strong class="text-on-surface">1,536 dims (text-embedding-3-large)</strong></span>
+</div>
+</div>
+</section>
+<!-- SECCIÓN SUPERIOR: ZONA DE INGESTA DOCUMENTAL Y PIPELINE VECTORIAL (FR-045, AIR-004) -->
+<section class="bg-surface-default rounded-xl p-space-xl shadow-sm space-y-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pipeline de Ingesta y Vectorización de Documentos Oficiales</h2>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Módulo de extracción certificada con indexación semántica en tiempo real</span>
+</div>
+</div>
+<span class="hidden md:inline-flex items-center gap-1 font-tech-code text-[11px] uppercase tracking-wider text-outline px-2.5 py-1 rounded bg-surface-sunken">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        Parsing Engine v4.2
+      </span>
+</div>
+<!-- Dropzone Area Interactivo -->
+<div class="relative rounded-xl p-8 bg-surface-container-low transition-all duration-200">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto space-y-space-md">
+<div class="w-16 h-16 rounded-2xl bg-surface-default shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[36px]">cloud_upload</span>
+</div>
+<div class="space-y-1">
+<p class="font-headline-sm text-headline-sm text-on-surface">
+            Cargar nueva directiva, estatuto o reglamento oficial (PDF)
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Arrastra archivos oficiales visados o selecciona desde tu equipo. Formato admitido: PDF con texto digitalizado o OCR de alta fidelidad (Máx. 50 MB por archivo).
+          </p>
+</div>
+<button class="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-default text-secondary font-body-sm text-body-sm font-semibold shadow-sm hover:bg-surface-sunken transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+          Explorar sistema local de archivos
+        </button>
+</div>
+<!-- Parámetros de Ingesta Inteligente -->
+<div class="mt-8 pt-6 bg-surface-default/60 rounded-lg p-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md items-end">
+<!-- Selector Tipo de Norma -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface flex items-center gap-1" for="select-norma">
+<span>Tipo de Norma Oficial</span>
+<span class="text-danger-text">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none appearance-none cursor-pointer focus:bg-surface-default" id="select-norma">
+<option value="reglamento">Reglamento General DGI</option>
+<option value="directiva">Directiva DGI Específica</option>
+<option value="manual">Manual de Ética y Bioética</option>
+<option value="resolucion">Resolución Rectoral</option>
+<option value="guia">Guía Metodológica Institucional</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Selector Estrategia de Chunking -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface flex items-center gap-1" for="select-chunking">
+<span>Estrategia de Chunking Vectorial</span>
+<span class="text-danger-text">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none appearance-none cursor-pointer focus:bg-surface-default" id="select-chunking">
+<option value="articulos">Semántico por Artículos (512 tokens / 50 overlap)</option>
+<option value="titulos">Jerárquico por Títulos y Capítulos</option>
+<option value="parrafos">Párrafos Estándar (256 tokens / 30 overlap)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Checkbox Tablas y Botón ÚNICO PRIMARIO -->
+<div class="flex flex-col justify-end space-y-3">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-secondary bg-surface-sunken cursor-pointer focus:ring-0 focus:ring-offset-0" id="check-tablas" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Extraer y vectorizar tablas analíticas y fórmulas</span>
+</label>
+<!-- EL ÚNICO CTA PRIMARIO DE LA PANTALLA -->
+<button class="w-full h-10 px-space-lg rounded-lg bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold shadow-sm hover:bg-secondary/90 transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Procesar e Indexar Documento al RAG</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pipeline Visual de 4 Etapas Secuenciales -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code text-on-surface-variant uppercase tracking-wider font-semibold">Trazabilidad del Flujo de Ingesta Activo</span>
+<span class="font-tech-code text-tech-code text-success-text font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span> Canales Operativos
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<!-- Etapa 1 -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code text-on-surface-variant">01 / PARSEO</span>
+<span class="material-symbols-outlined text-success-icon text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Parseo PDF &amp; OCR</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tesseract v5 + PyMuPDF</p>
+</div>
+<div class="w-full bg-surface-elevated h-1.5 rounded-full overflow-hidden">
+<div class="bg-success-icon h-full w-full"></div>
+</div>
+<span class="font-tech-code text-[11px] text-success-text font-semibold">Completado 100%</span>
+</div>
+<!-- Etapa 2 -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code text-on-surface-variant">02 / SEGMENTACIÓN</span>
+<span class="material-symbols-outlined text-success-icon text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Tokenización &amp; Chunking</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tiktoken cl100k_base</p>
+</div>
+<div class="w-full bg-surface-elevated h-1.5 rounded-full overflow-hidden">
+<div class="bg-success-icon h-full w-full"></div>
+</div>
+<span class="font-tech-code text-[11px] text-success-text font-semibold">Completado 100%</span>
+</div>
+<!-- Etapa 3 -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code text-on-surface-variant">03 / EMBEDDINGS</span>
+<span class="material-symbols-outlined text-success-icon text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Generación Vectorial</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">text-embedding-3-large</p>
+</div>
+<div class="w-full bg-surface-elevated h-1.5 rounded-full overflow-hidden">
+<div class="bg-success-icon h-full w-full"></div>
+</div>
+<span class="font-tech-code text-[11px] text-success-text font-semibold">Completado 100%</span>
+</div>
+<!-- Etapa 4 -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code text-on-surface-variant">04 / CARGA DGI</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">dns</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Vector DB &amp; Merkle</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ChromaDB + SHA-256 Tree</p>
+</div>
+<div class="w-full bg-surface-elevated h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-full"></div>
+</div>
+<span class="font-tech-code text-[11px] text-secondary font-semibold">Operativo / Sincronizado</span>
+</div>
+</div>
+</div>
+</section>
+<!-- MÉTRICAS CLAVE DEL CORPUS (REGLA DE DENSIDAD COGNITIVA: 4 KPIS) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-default p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase font-semibold">Total Documentos Activos</span>
+<div class="p-1.5 rounded-md bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="my-3">
+<span class="font-tech-data-lg text-tech-data-lg text-on-surface">14 Normativas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        128 artículos clave, 100% visados por Rectorado
+      </p>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-default p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase font-semibold">Volumen Vectorial</span>
+<div class="p-1.5 rounded-md bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</div>
+</div>
+<div class="my-3">
+<span class="font-tech-data-lg text-tech-data-lg text-on-surface">4,892 Chunks</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Promedio 485 tokens/chunk · Espacio: 28.4 MB
+      </p>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-default p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase font-semibold">Latencia Inferencia</span>
+<div class="p-1.5 rounded-md bg-success-bg text-success-text">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+</div>
+<div class="my-3 flex items-baseline gap-2">
+<span class="font-tech-data-lg text-tech-data-lg text-on-surface">1.18 s</span>
+<span class="font-tech-code text-[11px] text-success-text font-semibold">-12% optimizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Búsqueda híbrida BM25 + Reciprocal Rank Fusion
+      </p>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-default p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase font-semibold">Integridad General</span>
+<div class="p-1.5 rounded-md bg-surface-sunken text-on-surface">
+<span class="material-symbols-outlined text-[18px]">enhanced_encryption</span>
+</div>
+</div>
+<div class="my-3">
+<span class="font-tech-data-lg text-[16px] leading-tight text-on-surface break-all">SHA-256: e8b9...784f</span>
+</div>
+<p class="font-body-sm text-body-sm text-success-text font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+        Verificado en Consorcio Registral DGI
+      </p>
+</div>
+</section>
+<!-- SECCIÓN INFERIOR: INVENTARIO MAESTRO DE REGLAMENTOS ACTIVOS EN EL CORPUS -->
+<section class="bg-surface-default rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Barra Superior de Filtrado y Control -->
+<div class="p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex-1 max-w-lg">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">filter_alt</span>
+<input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none transition-all focus:bg-surface-default" placeholder="Filtrar reglamentos por título, código R.R., palabras clave o hash..." type="text"/>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Filtro Estado -->
+<select class="h-10 px-3 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none cursor-pointer">
+<option value="">Todos los Estados</option>
+<option value="indexado">Indexado 100%</option>
+<option value="proceso">En Indexación</option>
+<option value="pendiente">Pendiente de Visado</option>
+</select>
+<!-- Filtro Categoría -->
+<select class="h-10 px-3 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none cursor-pointer">
+<option value="">Todas las Categorías</option>
+<option value="general">General DGI</option>
+<option value="etica">Ética &amp; CIE</option>
+<option value="financiero">Financiero y Rendición</option>
+<option value="propiedad">Propiedad Intelectual</option>
+</select>
+<span class="font-tech-code text-tech-code text-on-surface-variant px-2">
+          Mostrando <strong>5 de 14</strong> documentos
+        </span>
+</div>
+</div>
+<!-- Tabla Formal de Auditoría Institucional -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken font-body-sm text-body-sm font-semibold uppercase tracking-wider text-on-surface-variant">
+<th class="py-3 px-4">Documento y Tipología</th>
+<th class="py-3 px-4">Código Oficial</th>
+<th class="py-3 px-4">Págs. / Chunks</th>
+<th class="py-3 px-4">Entrada en Vigor</th>
+<th class="py-3 px-4">Estado Indexación</th>
+<th class="py-3 px-4">Hash SHA-256 (CVD)</th>
+<th class="py-3 px-4 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<!-- Fila 1: Prioritario -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Reglamento General de Investigación DGI 2024-2025</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-tech-code text-[11px] font-bold uppercase">
+                    Prioritario / Base
+                  </span>
+</div>
+<span class="text-on-surface-variant text-[13px]">Marco rector de convocatorias, derechos de autor e incentivos docentes</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              R.R. Nº 1042-2024-R-URPMP
+            </td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              128 págs. <span class="text-outline">·</span> 1,420 chunks
+            </td>
+<td class="py-4 px-4 text-on-surface-variant">
+              15 Ene 2024
+            </td>
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code w-max font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon"></span>
+                  Indexado 100%
+                </span>
+<span class="font-tech-code text-[11px] text-on-surface-variant">Cosine Avg: 0.892</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-code text-tech-code text-on-surface" title="8f10e7a49c21d8b9e6e4f3a1c8b9d0e2">
+<span class="px-2 py-1 rounded bg-surface-sunken">8f10e7a49c21...</span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Ver Chunks" type="button">
+<span class="material-symbols-outlined text-[18px]">segment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Descargar PDF Visado" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg bg-transparent hover:bg-danger-bg text-danger-text transition-colors" title="Retirar del Corpus" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<span class="font-semibold text-on-surface">Directiva de Rendición de Cuentas y Adquisiciones para Fondos Concursables</span>
+<span class="text-on-surface-variant text-[13px]">Procedimientos de compras, boletas electrónicas y rendición periódica</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              DIR-DGI-008-2024
+            </td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              42 págs. <span class="text-outline">·</span> 610 chunks
+            </td>
+<td class="py-4 px-4 text-on-surface-variant">
+              01 Mar 2024
+            </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code w-max font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon"></span>
+                Indexado 100%
+              </span>
+</td>
+<td class="py-4 px-4 font-tech-code text-tech-code text-on-surface" title="4a520f86a23791a92e4e892d11342616">
+<span class="px-2 py-1 rounded bg-surface-sunken">4a520f86a237...</span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Ver Chunks" type="button">
+<span class="material-symbols-outlined text-[18px]">segment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Descargar PDF Visado" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg bg-transparent hover:bg-danger-bg text-danger-text transition-colors" title="Retirar del Corpus" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Manual del Comité Institucional de Ética y Bioética (CIE)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-tech-code text-[11px] font-semibold">
+                    Convenio OIT 169
+                  </span>
+</div>
+<span class="text-on-surface-variant text-[13px]">Consentimientos informados, protocolos biológicos y comunidades indígenas</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              CIE-NORM-02
+            </td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              56 págs. <span class="text-outline">·</span> 845 chunks
+            </td>
+<td class="py-4 px-4 text-on-surface-variant">
+              10 Feb 2024
+            </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code w-max font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon"></span>
+                Indexado 100%
+              </span>
+</td>
+<td class="py-4 px-4 font-tech-code text-tech-code text-on-surface" title="e3b0c44298fc1c149afbf4c8996fb924">
+<span class="px-2 py-1 rounded bg-surface-sunken">e3b0c44298fc...</span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Ver Chunks" type="button">
+<span class="material-symbols-outlined text-[18px]">segment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Descargar PDF Visado" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg bg-transparent hover:bg-danger-bg text-danger-text transition-colors" title="Retirar del Corpus" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<span class="font-semibold text-on-surface">Guía de Propiedad Intelectual, Publicaciones Scopus/WoS y Regalías</span>
+<span class="text-on-surface-variant text-[13px]">Patentes INDECOPI, filiación institucional obligatoria y bonificaciones</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              GPI-2024
+            </td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              26 págs. <span class="text-outline">·</span> 380 chunks
+            </td>
+<td class="py-4 px-4 text-on-surface-variant">
+              20 Abr 2024
+            </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code w-max font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon"></span>
+                Indexado 100%
+              </span>
+</td>
+<td class="py-4 px-4 font-tech-code text-tech-code text-on-surface" title="9f83c120a1744b8b809a47895e0c5ef9">
+<span class="px-2 py-1 rounded bg-surface-sunken">9f83c120a174...</span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Ver Chunks" type="button">
+<span class="material-symbols-outlined text-[18px]">segment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Descargar PDF Visado" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg bg-transparent hover:bg-danger-bg text-danger-text transition-colors" title="Retirar del Corpus" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col space-y-1">
+<span class="font-semibold text-on-surface">Estatuto Universitario URPMP - Capítulo X: Régimen de Fomento a la Ciencia</span>
+<span class="text-on-surface-variant text-[13px]">Disposiciones estatutarias superiores, licencias con goce y centros de investigación</span>
+</div>
+</td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              EST-URPMP-2023-CAP10
+            </td>
+<td class="py-4 px-4 font-tech-data-md text-tech-data-md text-on-surface">
+              18 págs. <span class="text-outline">·</span> 290 chunks
+            </td>
+<td class="py-4 px-4 text-on-surface-variant">
+              05 Dic 2023
+            </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code w-max font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon"></span>
+                Indexado 100%
+              </span>
+</td>
+<td class="py-4 px-4 font-tech-code text-tech-code text-on-surface" title="3c27b019da82119318b846e4922f518e">
+<span class="px-2 py-1 rounded bg-surface-sunken">3c27b019da82...</span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Ver Chunks" type="button">
+<span class="material-symbols-outlined text-[18px]">segment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface transition-colors" title="Descargar PDF Visado" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg bg-transparent hover:bg-danger-bg text-danger-text transition-colors" title="Retirar del Corpus" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación y Resumen -->
+<div class="px-space-lg py-space-md bg-surface-sunken/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span>Página 1 de 3 (Registros totales indexados: 14)</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-default text-on-surface shadow-sm opacity-50 cursor-not-allowed" type="button">Anterior</button>
+<button class="px-3 py-1.5 rounded-lg bg-secondary text-on-secondary shadow-sm font-semibold" type="button">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-default text-on-surface shadow-sm hover:bg-surface-sunken transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-default text-on-surface shadow-sm hover:bg-surface-sunken transition-colors" type="button">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-default text-on-surface shadow-sm hover:bg-surface-sunken transition-colors" type="button">Siguiente</button>
+</div>
+</div>
+</section>
+<!-- COMPONENTE DE DIVULGACIÓN PROGRESIVA: <TechDetails> -->
+<section class="bg-surface-default rounded-xl shadow-sm overflow-hidden">
+<details class="group">
+<summary class="flex items-center justify-between p-space-lg cursor-pointer select-none hover:bg-surface-sunken/50 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-headline-sm text-[16px] text-on-surface">Trazabilidad Criptográfica de la Base Vectorial e Integridad SHA-256</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Pruebas inmutables del consorcio registral y firma digital de la DGI</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-secondary font-body-sm text-body-sm font-semibold">
+<span class="group-open:hidden">Verificar Prueba Criptográfica</span>
+<span class="hidden group-open:inline">Ocultar Detalles de Sellado</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</div>
+</summary>
+<div class="p-space-lg bg-surface-sunken space-y-space-md">
+<!-- Merkle Root Block -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-tech-code text-tech-code font-semibold uppercase text-on-surface-variant">Merkle Root del Corpus RAG</span>
+<button class="font-tech-code text-[11px] text-secondary hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span> Copiar Root
+            </button>
+</div>
+<div class="p-3 bg-surface-default rounded-lg font-tech-code text-tech-code text-on-surface select-all break-all shadow-sm">
+            merkle:4a520f86a23791a92e4e892d11342616f7beea2b8a7f45c99e15df30887e1a0f:tree_v11
+          </div>
+</div>
+<!-- Grid de Metadatos Criptográficos -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-3.5 bg-surface-default rounded-lg space-y-1 shadow-sm">
+<span class="font-tech-code text-[11px] text-on-surface-variant uppercase font-semibold">Algoritmo de Hashing &amp; Sellado</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              SHA-256 / HMAC con clave asimétrica RSA-4096 registrada ante el Vicerrectorado de Investigación.
+            </p>
+</div>
+<div class="p-3.5 bg-surface-default rounded-lg space-y-1 shadow-sm">
+<span class="font-tech-code text-[11px] text-on-surface-variant uppercase font-semibold">Firma Electrónica Autorizada</span>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold">
+              Dr. Hugo Santillana Pinedo — <span class="font-tech-code text-tech-code text-secondary font-normal">CVD: URP-9482-TX-2024</span>
+</p>
+</div>
+</div>
+<!-- Sello de Tiempo y Bloque -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2 text-[12px] font-tech-code text-on-surface-variant">
+<span>Timestamp Servidor TSA: 2025-05-14T09:42:18.491Z (ISO-8601)</span>
+<span class="flex items-center gap-1 text-success-text font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Consenso de Bloque Activo #184,920
+          </span>
+</div>
+</div>
+</details>
+</section>
+</div>
+<script>
+  // Micro-interacción: Drag & Drop Feedback visual en la zona de ingesta
+  const dropzone = document.querySelector('input[type="file"]')?.parentElement || document.querySelector('.bg-surface-container-low');
+  if (dropzone) {
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropzone.classList.add('bg-surface-variant/30');
+      }, false);
+    });
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('bg-surface-variant/30');
+      }, false);
+    });
+  }
+</script></main><footer class="w-full bg-surface-default shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="w-full max-w-[1440px] mx-auto px-space-lg py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md font-body-sm text-body-sm"><a class="hover:text-secondary transition-colors" href="#">Mesa de Ayuda</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Normativas Académicas</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Términos de Servicio</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Aviso Legal &amp; Privacidad</a></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-success-bg font-tech-code text-tech-code text-success-text uppercase tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>WCAG 2.1 AAA</div><span class="font-tech-code text-tech-code text-outline">© 2025 Vicerrectorado de Investigación - DGI</span></div></div></footer></div></body></html>

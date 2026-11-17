@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+
+# Builds
+frontend/dist/
+
+# Datos locales generados al ejecutar (la BD y los archivos se crean solos en el primer arranque)
+backend/data/
+
+# Variables de entorno locales
+.env
+.env.local
+*.local
+
+# Logs y sistema
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

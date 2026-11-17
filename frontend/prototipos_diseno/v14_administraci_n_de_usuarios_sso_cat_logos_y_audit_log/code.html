@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "outline": "#75777e", "warning-text": "#92400e", "on-surface-variant": "#44474d", "on-background": "#0b1c30", "secondary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#00174b", "on-primary": "#ffffff", "success-bg": "#ecfdf5", "surface-container-highest": "#d3e4fe", "on-primary-fixed": "#071c37", "danger-text": "#991b1b", "success-icon": "#059669", "on-tertiary-fixed-variant": "#005137", "primary-fixed": "#d5e3ff", "danger-bg": "#fef2f2", "on-error-container": "#93000a", "bg-base": "#f8f9ff", "surface-container": "#e5eeff", "tertiary": "#000000", "secondary-container": "#346cef", "surface-sunken": "#f1f5f9", "outline-variant": "#c4c6ce", "on-error": "#ffffff", "on-tertiary-fixed": "#002114", "tertiary-fixed-dim": "#68dba9", "background": "#f8f9ff", "primary": "#000000", "primary-container": "#071c37", "surface-bright": "#f8f9ff", "on-primary-container": "#7284a5", "surface-default": "#ffffff", "surface-variant": "#d3e4fe", "secondary": "#0051d5", "secondary-fixed": "#dbe1ff", "warning-border": "#fde68a", "error-container": "#ffdad6", "border-subtle": "#e2e8f0", "on-tertiary": "#ffffff", "danger-icon-container": "#fee2e2", "success-text": "#065f46", "inverse-primary": "#b5c7ea", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#003ea7", "on-secondary": "#ffffff", "warning-bg": "#fffbeb", "on-tertiary-container": "#069669", "inverse-surface": "#213145", "surface-container-low": "#eff4ff", "surface": "#f8f9ff", "primary-fixed-dim": "#b5c7ea", "error": "#ba1a1a", "surface-tint": "#4d5f7d", "surface-elevated": "#e2e8f0", "danger-action": "#dc2626", "tertiary-container": "#002114", "surface-container-high": "#dce9ff", "tertiary-fixed": "#85f8c4", "surface-dim": "#cbdbf5", "on-primary-fixed-variant": "#354765", "on-secondary-container": "#fefcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-2xl": "2.5rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "tech-data-lg": [ "JetBrains Mono" ], "body-md": [ "Plus Jakarta Sans" ], "tech-code": [ "JetBrains Mono" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "tech-data-md": [ "JetBrains Mono" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "tech-data-lg": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "tech-code": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-xl": [ "35px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "500" } ], "headline-xl-mobile": [ "29px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "tech-data-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "body-lg": [ "17px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-bg-base font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-body-md text-surface-container-lowest tracking-tight leading-tight">URPMP</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug">Gestión Proyectos DGI</span></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-tech-code text-tech-code text-primary-fixed-dim uppercase tracking-wider block mb-space-xs">Navegación del Sistema</span><nav class="space-y-1" data-active-classes="bg-secondary text-on-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="registro-de-propuestas" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Registro de Propuestas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="plan-de-trabajo-y-finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Plan de Trabajo &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="productos-cientificos" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-body-md text-body-md">Productos Científicos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="evaluaciones-y-pares" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-body-md text-body-md">Evaluaciones y Pares</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="resoluciones-rectorales" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Resoluciones Rectorales</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-surface-variant hover:text-on-surface transition-colors" data-path="asistente-normativo-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-body-md text-body-md">Asistente Normativo IA</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-highest/10"><div class="flex items-start gap-space-sm"><div class="p-1 rounded-full bg-success-bg flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-success-icon text-[18px]">lock</span></div><div class="flex flex-col"><span class="font-tech-code text-tech-code text-surface-container-lowest font-medium uppercase">Integridad Criptográfica</span><span class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug mt-1">Consorcio Registral DGI con firma de sellado en bloque activo</span></div></div></div></aside><div class="pl-[280px] min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface-default/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-tech-code text-tech-code font-semibold uppercase">DGI</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-body-sm text-body-sm font-medium text-on-surface">Plataforma Institucional URPMP</span></div><div class="flex-1 max-w-lg mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none transition-all focus:bg-surface-default" placeholder="Buscar normativa, artículo, directiva o expediente..." type="text"/></div></div><div class="flex items-center gap-space-lg shrink-0"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-sunken hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-danger-action text-on-primary font-tech-code text-[10px] font-bold flex items-center justify-center leading-none">3</span></button><div class="flex items-center gap-space-sm pl-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Roberto Mendoza Vargas</span><span class="font-tech-code text-tech-code text-on-surface-variant leading-tight">Investigador Principal</span></div></div></div></div></header><main class="w-full max-w-[1440px] mx-auto pt-16 px-space-lg flex-1 bg-bg-base"><div class="flex flex-col w-full">
+<!-- Top Context / Breadcrumb / Status Hero Header -->
+<header class="flex flex-col gap-space-md mb-space-xl">
+<!-- Breadcrumb & System State -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<nav aria-label="Ruta de navegación" class="flex items-center gap-space-xs text-on-surface-variant font-tech-code text-tech-code">
+<a class="hover:text-secondary transition-colors" href="#">Inicio</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface-variant">Administración del Sistema</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-semibold text-on-surface">Usuarios SSO, Catálogos &amp; Audit Log</span>
+</nav>
+<!-- Security / Federation Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-2 h-2 rounded-full bg-success-icon inline-block"></span>
+          Proveedor SSO: Entra ID / Google SAML 2.0
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-tech-code text-tech-code text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">sync</span>
+          Sync Directorio: En Línea (Hace 4 min)
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">fingerprint</span>
+          Auditoría: Inmutable SHA-256
+        </span>
+</div>
+</div>
+<!-- Title and Subtitle Block with Architectural Minimalist Emphasis -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md bg-surface-default p-space-lg rounded-xl shadow-sm">
+<div class="space-y-1.5 max-w-4xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-tech-code text-tech-code text-secondary font-semibold uppercase">Módulo V14 · FR-002 / FR-004 / FR-042 / FR-043</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-tech-code text-tech-code font-medium">SSO Delegado (Sin Claves Locales)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Administración de Usuarios SSO, Catálogos Institucionales y Bitácora Inmutable
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Gobierno de identidades federadas, gobernanza de líneas de investigación y trazabilidad forense descentralizada respaldada por el consorcio registral DGI.
+        </p>
+</div>
+<!-- Action Strip: Unique Primary Action on this Screen -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-secondary text-on-secondary font-body-md text-body-md font-semibold shadow-sm hover:opacity-95 transition-all focus:outline-none" id="open-roles-drawer-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Aprobar &amp; Asignar Roles a Nuevos Usuarios</span>
+</button>
+</div>
+</div>
+<!-- Segmented Navigation Tabs (A, B, C) -->
+<div class="flex items-center justify-between border-b border-border-subtle pt-2">
+<div class="flex items-center gap-2">
+<button class="tab-trigger active relative px-4 py-3 font-body-md text-body-md font-semibold text-secondary flex items-center gap-2 border-b-2 border-secondary transition-all" id="tab-btn-sso" type="button">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>Directorio de Usuarios SSO (FR-002/004)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-tech-code text-tech-code text-secondary">148 Usuarios</span>
+</button>
+<button class="tab-trigger relative px-4 py-3 font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface flex items-center gap-2 transition-all" id="tab-btn-catalogos" type="button">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span>Catálogos Institucionales (FR-042)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">4 Áreas</span>
+</button>
+<button class="tab-trigger relative px-4 py-3 font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface flex items-center gap-2 transition-all" id="tab-btn-audit" type="button">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+<span>Bitácora de Auditoría Criptográfica (FR-043)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">Ledger Tx</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-tech-code text-tech-code pr-2">
+<span class="material-symbols-outlined text-[16px] text-success-icon">verified_user</span>
+<span>Conforme NFR-009 (Privacidad DNI)</span>
+</div>
+</div>
+</header>
+<!-- SUB-VISTA A: DIRECTORIO DE USUARIOS SSO -->
+<section class="flex flex-col gap-space-lg mb-space-2xl" id="subview-sso">
+<!-- Filter and Utility Bar -->
+<div class="bg-surface-default p-space-md rounded-xl shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[320px]">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-sunken font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:bg-surface-default transition-all" id="user-search-input" placeholder="Buscar por nombre, correo @urpmp.edu.pe o DNI enmascarado..." type="text"/>
+</div>
+<!-- Filters & Action Utilities -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Role Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none cursor-pointer appearance-none" id="role-filter">
+<option value="all">Rol: Todos los Roles</option>
+<option value="investigador">Investigador Principal</option>
+<option value="revisor">Revisor Par Anónimo</option>
+<option value="comite">Miembro Comité de Ética (CIE)</option>
+<option value="coordinador">Coordinador DGI</option>
+<option value="administrador">Administrador General</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Academic Department Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none cursor-pointer appearance-none" id="dept-filter">
+<option value="all">Departamento: Todos</option>
+<option value="telematica">Ing. Telemática y Ambiental</option>
+<option value="medicina">Ciencias Médicas y Bioética</option>
+<option value="automatizacion">Ing. y Automatización</option>
+<option value="biotecnologia">Biotecnología y Genética</option>
+<option value="externo">Externo Arbitrado</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none cursor-pointer appearance-none" id="status-filter">
+<option value="all">Estado: Activo / Suspendido</option>
+<option value="active">Activo</option>
+<option value="suspended">Suspendido</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<!-- Secondary Action Buttons -->
+<button class="h-10 px-3.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1.5 shadow-sm transition-colors" id="sync-sso-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">autorenew</span>
+<span>Sincronizar Directorio</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1.5 shadow-sm transition-colors" id="export-csv-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">download</span>
+<span>Exportar (CSV)</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container (Strict Minimalist, No Hard Borders, Tonal Shift) -->
+<div class="bg-surface-default rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken text-on-surface-variant font-body-sm text-body-sm uppercase tracking-wider">
+<th class="py-3.5 px-4 font-semibold" scope="col">Investigador / Usuario Federado</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Identificador (NFR-009)</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Departamento Académico</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Roles Asignados</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Proveedor SSO</th>
+<th class="py-3.5 px-4 font-semibold text-center" scope="col">Estado SSO</th>
+<th class="py-3.5 px-4 font-semibold text-right" scope="col">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-md text-body-md text-on-surface">
+<!-- Row 1: Dr. Roberto Mendoza Vargas -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-body-md shrink-0 shadow-sm">
+                    RM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Dr. Roberto Mendoza Vargas</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant truncate">roberto.mendoza@urpmp.edu.pe</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-tech-code text-tech-code bg-surface-sunken px-2 py-1 rounded text-on-surface">DNI: ***.***.342</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface leading-tight block">Ingeniería Telemática y Ambiental</span>
+<span class="font-tech-code text-tech-code text-outline">Cód. DPT-TEL-08</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-tech-code text-tech-code text-secondary font-medium">Investigador Principal</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">Autor Corresponsal</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud</span>
+                  Microsoft Entra ID
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="btn-manage-role px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1 shadow-sm transition-colors" data-email="roberto.mendoza@urpmp.edu.pe" data-role="Investigador Principal" data-user="Dr. Roberto Mendoza Vargas" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Gestionar Roles</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Dra. Carmen Valdivia Prado -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-body-md shrink-0 shadow-sm">
+                    CV
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Dra. Carmen Valdivia Prado</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant truncate">carmen.valdivia@urpmp.edu.pe</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-tech-code text-tech-code bg-surface-sunken px-2 py-1 rounded text-on-surface">DNI: ***.***.891</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface leading-tight block">Ciencias Médicas y Bioética</span>
+<span class="font-tech-code text-tech-code text-outline">Cód. DPT-MED-03</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-warning-bg text-warning-text font-tech-code text-tech-code font-semibold">Presidenta Comité Ética</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-tech-code text-tech-code text-secondary font-medium">Investigador</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-warning-text">mail</span>
+                  Google Workspace
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="btn-manage-role px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1 shadow-sm transition-colors" data-email="carmen.valdivia@urpmp.edu.pe" data-role="Presidenta Comité Ética" data-user="Dra. Carmen Valdivia Prado" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Gestionar Roles</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Dr. Hugo Santillana Pinedo -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-bold text-body-md shrink-0 shadow-sm">
+                    HS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Dr. Hugo Santillana Pinedo</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant truncate">hugo.santillana@urpmp.edu.pe</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-tech-code text-tech-code bg-surface-sunken px-2 py-1 rounded text-on-surface">DNI: ***.***.155</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface leading-tight block">Ingeniería y Automatización</span>
+<span class="font-tech-code text-tech-code text-outline">Cód. DPT-AUT-02</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-tech-code text-tech-code text-secondary font-medium">Vocal Técnico CIE</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">Secretario General</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud</span>
+                  Microsoft Entra ID
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="btn-manage-role px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1 shadow-sm transition-colors" data-email="hugo.santillana@urpmp.edu.pe" data-role="Vocal Técnico CIE" data-user="Dr. Hugo Santillana Pinedo" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Gestionar Roles</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Revisor Par Anónimo #REV-7734 -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center font-bold text-body-md shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Revisor Par Anónimo #REV-7734</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant truncate">par.ciego.7734@ciego.urpmp.edu.pe</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-tech-code text-tech-code bg-surface-container-high px-2 py-1 rounded text-on-surface font-semibold">DNI: ENCRIPTADO</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface leading-tight block">Externo Arbitrado</span>
+<span class="font-tech-code text-tech-code text-outline">Comité Ciego Internacional</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-variant font-tech-code text-tech-code text-on-surface font-semibold">Evaluador Ciego</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-outline">hub</span>
+                  SAML 2.0 Federado
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="btn-manage-role px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1 shadow-sm transition-colors" data-email="par.ciego.7734@ciego.urpmp.edu.pe" data-role="Evaluador Ciego" data-user="Revisor Par Anónimo #REV-7734" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Gestionar Roles</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Dra. Elena Morales -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-body-md shrink-0 shadow-sm">
+                    EM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Dra. Elena Morales</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant truncate">elena.morales@urpmp.edu.pe</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-tech-code text-tech-code bg-surface-sunken px-2 py-1 rounded text-on-surface">DNI: ***.***.410</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface leading-tight block">Biotecnología y Recursos Genéticos</span>
+<span class="font-tech-code text-tech-code text-outline">Cód. DPT-BIO-05</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-tech-code text-tech-code text-secondary font-semibold">Coordinadora DGI</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-sunken font-tech-code text-tech-code text-on-surface-variant">Comité Técnico</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-warning-text">mail</span>
+                  Google Workspace
+                </span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-success-bg text-success-text font-tech-code text-tech-code">
+<span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>
+                  Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="btn-manage-role px-3 py-1.5 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-1 shadow-sm transition-colors" data-email="elena.morales@urpmp.edu.pe" data-role="Coordinadora DGI" data-user="Dra. Elena Morales" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Gestionar Roles</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Density Strip -->
+<div class="p-space-md bg-surface-sunken/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm border-t border-border-subtle">
+<div class="flex items-center gap-3">
+<span class="font-tech-code text-tech-code text-on-surface-variant">Mostrando 1 - 5 de 148 usuarios federados</span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span>Filas por página:</span>
+<select class="h-7 px-2 bg-surface-default rounded text-on-surface font-tech-code text-tech-code outline-none">
+<option>5</option>
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-default hover:bg-surface-sunken flex items-center justify-center text-outline disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-secondary text-on-secondary font-tech-code text-tech-code font-bold flex items-center justify-center" type="button">
+            1
+          </button>
+<button class="w-8 h-8 rounded bg-surface-default hover:bg-surface-sunken font-tech-code text-tech-code text-on-surface flex items-center justify-center" type="button">
+            2
+          </button>
+<button class="w-8 h-8 rounded bg-surface-default hover:bg-surface-sunken font-tech-code text-tech-code text-on-surface flex items-center justify-center" type="button">
+            3
+          </button>
+<span class="px-1 text-outline font-tech-code">...</span>
+<button class="w-8 h-8 rounded bg-surface-default hover:bg-surface-sunken font-tech-code text-tech-code text-on-surface flex items-center justify-center" type="button">
+            30
+          </button>
+<button class="w-8 h-8 rounded bg-surface-default hover:bg-surface-sunken flex items-center justify-center text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SUB-VISTA B: TARJETA DE CATÁLOGOS INSTITUCIONALES (FR-042) -->
+<section class="flex flex-col gap-space-lg mb-space-2xl" id="subview-catalogos">
+<div class="bg-surface-default rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">category</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Catálogos Institucionales de Gobernanza (FR-042)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Parámetros base para categorización de convocatorias, líneas oficiales CONCYTEC-OECD y tipología de proyectos.
+          </p>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold inline-flex items-center gap-2 shadow-sm transition-colors shrink-0" id="config-catalog-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">settings</span>
+<span>Configurar Líneas y Comités</span>
+</button>
+</div>
+<!-- Grid of 3 Catalog Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Catalog 1: Departamentos -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-tech-code text-tech-code text-outline uppercase font-semibold">Estructura Académica</span>
+<span class="px-2 py-0.5 rounded bg-success-bg text-success-text font-tech-code text-tech-code font-bold">12 Activos</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Departamentos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Unidades de adscripción docente y laboratorios de experimentación vinculados a convenios marco.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-border-subtle">
+<span class="font-tech-code text-tech-code text-outline">Última rev.: 15 Ene 2025</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold hover:underline cursor-pointer">Ver detalle →</span>
+</div>
+</div>
+<!-- Catalog 2: Líneas Concytec / URPMP -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-tech-code text-tech-code text-outline uppercase font-semibold">Taxonomía OCDE</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-tech-code text-tech-code font-bold">28 Registradas</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Líneas de Investigación</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Áreas prioritarias CONCYTEC: Salud, Biotecnología, TIC, Energía renovable y Biodiversidad.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-border-subtle">
+<span class="font-tech-code text-tech-code text-outline">Árbol v3.4 verificado</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold hover:underline cursor-pointer">Ver taxonomía →</span>
+</div>
+</div>
+<!-- Catalog 3: Tipos de Proyectos -->
+<div class="p-space-md rounded-xl bg-surface-sunken flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-tech-code text-tech-code text-outline uppercase font-semibold">Mecanismo Financiero</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-tech-code text-tech-code font-bold">3 Esquemas</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Tipos de Financiación</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              1. Fondos Semilla Concursables, 2. I+D+i con Empresa Colaboradora, 3. Proyectos Especiales Rectorales.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-border-subtle">
+<span class="font-tech-code text-tech-code text-outline">Directiva DIR-INV-2024</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold hover:underline cursor-pointer">Gestionar fondos →</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SUB-VISTA C: BITÁCORA DE AUDITORÍA INMUTABLE (AUDIT LOG - FR-043) -->
+<section class="flex flex-col gap-space-lg mb-space-2xl" id="subview-audit">
+<div class="bg-surface-default rounded-xl p-space-lg shadow-sm">
+<!-- Section Title & Academic Cryptographic Trust Badge -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md border-b border-border-subtle">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Registro Criptográfico de Auditoría de Acciones y Seguridad (Audit Trail)</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Cada evento queda sellado con hash SHA-256 inmutable en el consorcio registral universitario. Registro de solo lectura no modificable bajo protocolo RFC-3161 y validador distribuido.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="px-3 py-1.5 rounded-lg bg-surface-sunken font-tech-code text-tech-code text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-success-icon"></span>
+            Nodo Validador URPMP #01: OPERATIVO
+          </span>
+</div>
+</div>
+<!-- Progressive Disclosure Accordion (<TechDetails>) -->
+<div class="my-space-md">
+<details class="group bg-surface-sunken rounded-xl overflow-hidden transition-all duration-200">
+<summary class="cursor-pointer p-space-md font-body-sm text-body-sm font-semibold text-on-surface flex items-center justify-between select-none hover:bg-surface-container/40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">token</span>
+<span>Trazabilidad Criptográfica del Nodo Validador &amp; Parámetros de Sellado</span>
+</div>
+<div class="flex items-center gap-2 font-tech-code text-tech-code text-on-surface-variant">
+<span>Verificar Prueba Criptográfica</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</div>
+</summary>
+<div class="p-space-md border-t border-border-subtle bg-surface-container-lowest/70 space-y-3 font-tech-code text-tech-code">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="space-y-1">
+<span class="text-outline uppercase text-[11px] font-bold block">Último Bloque Sellado</span>
+<span class="font-tech-data-md text-tech-data-md text-on-surface block font-bold">Bloque #194,821</span>
+<span class="text-on-surface-variant text-[11px]">Timestamp TSA: 2025-02-28 16:15:00 UTC-5</span>
+</div>
+<div class="space-y-1">
+<span class="text-outline uppercase text-[11px] font-bold block">Certificado de Firma Raíz</span>
+<span class="font-tech-data-md text-tech-data-md text-on-surface block truncate">X.509 CN=URPMP-CA-SECURE-2025</span>
+<span class="text-success-text text-[11px] font-semibold">Huella SHA-1: 9B:88:51:D4:6C:54:33</span>
+</div>
+<div class="space-y-1">
+<span class="text-outline uppercase text-[11px] font-bold block">Estándar de Sellado Temporal</span>
+<span class="font-tech-data-md text-tech-data-md text-on-surface block">RFC-3161 TSA Server</span>
+<span class="text-on-surface-variant text-[11px]">Algoritmo Hash: SHA-256 (FIPS 180-4)</span>
+</div>
+</div>
+<div class="pt-2 border-t border-border-subtle">
+<span class="text-outline text-[11px] uppercase block mb-1">Merkle Root Hash Actual:</span>
+<div class="p-2 rounded bg-surface-sunken text-on-surface select-all font-tech-code text-[11px] break-all">
+                0x8e42f9b1c70e2849e7a46f7f6831d1d871fa4f97ea14f4e1564f1dc0b3b42918e907d4c2b9a7f3e1a0b5c4d3e2f10987
+              </div>
+</div>
+</div>
+</details>
+</div>
+<!-- Technical Log Table with JetBrains Mono Emphasis -->
+<div class="overflow-hidden rounded-xl bg-surface-default shadow-sm border border-border-subtle">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken text-on-surface-variant font-tech-code text-tech-code uppercase">
+<th class="py-3 px-4 font-semibold" scope="col">Marca Temporal (UTC-5)</th>
+<th class="py-3 px-4 font-semibold" scope="col">Identidad / Rol Origen</th>
+<th class="py-3 px-4 font-semibold" scope="col">Operación (OpCode)</th>
+<th class="py-3 px-4 font-semibold" scope="col">Dirección IP</th>
+<th class="py-3 px-4 font-semibold" scope="col">Prueba Criptográfica (SHA-256)</th>
+<th class="py-3 px-4 font-semibold text-center" scope="col">Validación</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-tech-code text-tech-code text-on-surface">
+<!-- Event 1 -->
+<tr class="hover:bg-surface-sunken/50 transition-colors">
+<td class="py-3 px-4 whitespace-nowrap text-on-surface font-medium">
+                  2025-02-28 16:11:45
+                </td>
+<td class="py-3 px-4">
+<span class="font-body-sm text-body-sm font-semibold block text-on-surface">Dra. Elena Morales</span>
+<span class="text-secondary text-[11px]">Coordinador DGI</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold text-[11px]">
+                    EVENT_SUBMISSION_EVAL
+                  </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap text-on-surface-variant">
+                  190.237.45.12
+                </td>
+<td class="py-3 px-4 font-tech-code text-[11px] text-on-surface-variant max-w-[220px]">
+<span class="truncate block hover:text-on-surface transition-colors cursor-pointer" title="4a520f86a237a91a92e4e892d11342616f7beea2b8a7f45...">
+                    4a520f86a237a91a92e4e892d11342616f7beea2b8a7f45...
+                  </span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px] text-success-icon">check_circle</span>
+                    Validador OK
+                  </span>
+</td>
+</tr>
+<!-- Event 2 -->
+<tr class="hover:bg-surface-sunken/50 transition-colors">
+<td class="py-3 px-4 whitespace-nowrap text-on-surface font-medium">
+                  2025-02-28 15:56:02
+                </td>
+<td class="py-3 px-4">
+<span class="font-body-sm text-body-sm font-semibold block text-on-surface">Dr. Hugo Santillana Pinedo</span>
+<span class="text-on-surface-variant text-[11px]">CIE Pleno</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-on-surface font-semibold text-[11px]">
+                    EVENT_COLEG_VOTE
+                  </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap text-on-surface-variant">
+                  200.48.112.88
+                </td>
+<td class="py-3 px-4 font-tech-code text-[11px] text-on-surface-variant max-w-[220px]">
+<span class="truncate block hover:text-on-surface transition-colors cursor-pointer" title="8f434346648f6b96df89dda901c5176b10a6d83961dd3c1...">
+                    8f434346648f6b96df89dda901c5176b10a6d83961dd3c1...
+                  </span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px] text-success-icon">check_circle</span>
+                    Validador OK
+                  </span>
+</td>
+</tr>
+<!-- Event 3 -->
+<tr class="hover:bg-surface-sunken/50 transition-colors">
+<td class="py-3 px-4 whitespace-nowrap text-on-surface font-medium">
+                  2025-02-28 15:42:19
+                </td>
+<td class="py-3 px-4">
+<span class="font-body-sm text-body-sm font-semibold block text-on-surface">Dra. Carmen Valdivia Prado</span>
+<span class="text-warning-text text-[11px] font-semibold">Presidenta CIE</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-warning-bg text-warning-text font-semibold text-[11px]">
+                    EVENT_DICTAMEN_EMIT
+                  </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap text-on-surface-variant">
+                  179.6.198.24
+                </td>
+<td class="py-3 px-4 font-tech-code text-[11px] text-on-surface-variant max-w-[220px]">
+<span class="truncate block hover:text-on-surface transition-colors cursor-pointer" title="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934...">
+                    e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934...
+                  </span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px] text-success-icon">check_circle</span>
+                    Validador OK
+                  </span>
+</td>
+</tr>
+<!-- Event 4 -->
+<tr class="hover:bg-surface-sunken/50 transition-colors">
+<td class="py-3 px-4 whitespace-nowrap text-on-surface font-medium">
+                  2025-02-28 10:42:00
+                </td>
+<td class="py-3 px-4">
+<span class="font-body-sm text-body-sm font-semibold block text-on-surface">Dr. Roberto Mendoza Vargas</span>
+<span class="text-secondary text-[11px]">Investigador Principal</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-on-surface font-semibold text-[11px]">
+                    EVENT_RAG_QUERY_AUTH
+                  </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap text-on-surface-variant">
+                  181.66.14.205
+                </td>
+<td class="py-3 px-4 font-tech-code text-[11px] text-on-surface-variant max-w-[220px]">
+<span class="truncate block hover:text-on-surface transition-colors cursor-pointer" title="9f83c120a174826bdf0218b846e...">
+                    9f83c120a174826bdf0218b846e...
+                  </span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success-bg text-success-text text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px] text-success-icon">check_circle</span>
+                    Validador OK
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL DIALOG: GESTIÓN DE ROLES SSO (High-Fidelity Institutional Modal) -->
+<div class="fixed inset-0 bg-primary-container/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="roles-modal-backdrop">
+<div class="w-full max-w-xl bg-surface-default rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150" id="roles-modal">
+<div class="p-space-lg bg-surface-sunken border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Asignación de Roles Federados (SSO)</h3>
+<p class="font-tech-code text-tech-code text-on-surface-variant" id="modal-user-subtitle">Usuario Seleccionado</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-default text-outline hover:text-on-surface flex items-center justify-center transition-colors" id="close-modal-x" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="p-space-lg space-y-space-md" id="roles-form">
+<!-- SSO Security Notice -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+<strong>Gobernanza Cero Claves Locales:</strong> Este usuario autentica exclusivamente mediante Microsoft Entra ID institucional. Los roles asignados aquí determinan privilegios de dictamen, firma y consulta RAG.
+          </div>
+</div>
+<!-- Available Roles Checkbox Grid -->
+<fieldset class="space-y-2">
+<legend class="font-body-sm text-body-sm font-semibold text-on-surface uppercase tracking-wider mb-1 block">Privilegios y Roles Institucionales:</legend>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" name="role" type="checkbox" value="inv_principal"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Investigador Principal (IP)</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Capacidad para formulación de propuestas y reporte de entregables</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" name="role" type="checkbox" value="cie_member"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Miembro Comité Institucional de Ética (CIE)</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Emisión de dictámenes éticos con firma criptográfica</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" name="role" type="checkbox" value="peer_reviewer"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Revisor Par Anónimo (Doble Ciego)</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Evaluación ciega sin visualización de filiación de proponentes</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" name="role" type="checkbox" value="dgi_admin"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Coordinación y Fiscalización DGI</span>
+<span class="font-tech-code text-tech-code text-on-surface-variant">Monitoreo de hitos presupuestales y cierre de proyectos</span>
+</div>
+</label>
+</fieldset>
+<!-- Department Affiliation Selector -->
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-on-surface uppercase tracking-wider mb-1" for="modal-dept-select">
+            Departamento de Adscripción Primaria:
+          </label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none" id="modal-dept-select">
+<option>Ingeniería Telemática y Ambiental (DPT-TEL-08)</option>
+<option>Ciencias Médicas y Bioética (DPT-MED-03)</option>
+<option>Ingeniería y Automatización (DPT-AUT-02)</option>
+<option>Biotecnología y Recursos Genéticos (DPT-BIO-05)</option>
+<option>Externo Arbitrado (Arbitraje Par Internacional)</option>
+</select>
+</div>
+<!-- Justification Field with Realtime Character Microcopy -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface uppercase tracking-wider" for="modal-justification">
+              Motivo Administrativo del Cambio:
+            </label>
+<span class="font-tech-code text-tech-code text-outline" id="char-counter">0 / 250 caract.</span>
+</div>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-sunken font-body-sm text-body-sm text-on-surface outline-none resize-none" id="modal-justification" placeholder="Indicar número de memorando rectoral o acta de sesión CIE..." rows="2"></textarea>
+</div>
+<!-- Dialog Footer Actions -->
+<div class="pt-2 flex items-center justify-end gap-space-sm border-t border-border-subtle">
+<button class="px-4 py-2 rounded-lg bg-surface-default hover:bg-surface-sunken text-on-surface font-body-sm text-body-sm font-semibold transition-colors" id="cancel-modal-btn" type="button">
+            Cancelar
+          </button>
+<button class="px-5 py-2 rounded-lg bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold shadow-sm hover:opacity-95 transition-all" id="save-modal-btn" type="submit">
+            Confirmar y Registrar en Ledger
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast for Micro-interaction feedback -->
+<div class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container shadow-xl" id="toast-notification">
+<span class="material-symbols-outlined text-success-icon text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-surface-container-lowest font-medium" id="toast-message">Acción completada con éxito.</span>
+</div>
+</div>
+<script>
+  (function initModuleV14() {
+    // Tab switching behavior
+    const tabButtons = [
+      { btn: document.getElementById('tab-btn-sso'), section: document.getElementById('subview-sso') },
+      { btn: document.getElementById('tab-btn-catalogos'), section: document.getElementById('subview-catalogos') },
+      { btn: document.getElementById('tab-btn-audit'), section: document.getElementById('subview-audit') }
+    ];
+
+    function activateTab(index) {
+      tabButtons.forEach((tab, i) => {
+        if (!tab.btn || !tab.section) return;
+        if (i === index) {
+          tab.btn.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'font-semibold');
+          tab.btn.classList.remove('text-on-surface-variant', 'font-medium');
+          tab.section.classList.remove('hidden');
+          // Smooth scroll to the target module if clicking other views
+          if (index > 0) {
+            tab.section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } else {
+          tab.btn.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'font-semibold');
+          tab.btn.classList.add('text-on-surface-variant', 'font-medium');
+        }
+      });
+    }
+
+    tabButtons.forEach((item, idx) => {
+      if (item.btn) {
+        item.btn.addEventListener('click', () => activateTab(idx));
+      }
+    });
+
+    // Toast helper
+    const toast = document.getElementById('toast-notification');
+    const toastMsg = document.getElementById('toast-message');
+    function showToast(text) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3500);
+    }
+
+    // Role management modal
+    const modalBackdrop = document.getElementById('roles-modal-backdrop');
+    const closeModalX = document.getElementById('close-modal-x');
+    const cancelModalBtn = document.getElementById('cancel-modal-btn');
+    const openDrawerBtn = document.getElementById('open-roles-drawer-btn');
+    const userSubtitle = document.getElementById('modal-user-subtitle');
+    const rolesForm = document.getElementById('roles-form');
+    const textarea = document.getElementById('modal-justification');
+    const counter = document.getElementById('char-counter');
+
+    function openModal(userName, userEmail) {
+      if (userSubtitle) {
+        userSubtitle.textContent = userName ? `${userName} · (${userEmail})` : 'Alta de Nuevo Usuario SSO Federado';
+      }
+      if (modalBackdrop) modalBackdrop.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      if (modalBackdrop) modalBackdrop.classList.add('hidden');
+      if (rolesForm) rolesForm.reset();
+      if (counter) counter.textContent = '0 / 250 caract.';
+    }
+
+    if (openDrawerBtn) {
+      openDrawerBtn.addEventListener('click', () => openModal('', ''));
+    }
+
+    document.querySelectorAll('.btn-manage-role').forEach(button => {
+      button.addEventListener('click', () => {
+        const user = button.getAttribute('data-user');
+        const email = button.getAttribute('data-email');
+        openModal(user, email);
+      });
+    });
+
+    if (closeModalX) closeModalX.addEventListener('click', closeModal);
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeModal();
+      });
+    }
+
+    if (textarea && counter) {
+      textarea.addEventListener('input', () => {
+        const len = textarea.value.length;
+        counter.textContent = `${len} / 250 caract.`;
+        if (len > 250) {
+          counter.classList.add('text-danger-text');
+        } else {
+          counter.classList.remove('text-danger-text');
+        }
+      });
+    }
+
+    if (rolesForm) {
+      rolesForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        closeModal();
+        showToast('Asignación de roles registrada y sellada con éxito en el bloque registral.');
+      });
+    }
+
+    // Filter feedback triggers
+    const syncBtn = document.getElementById('sync-sso-btn');
+    if (syncBtn) {
+      syncBtn.addEventListener('click', () => {
+        syncBtn.classList.add('opacity-50', 'pointer-events-none');
+        showToast('Sincronizando directorio con Microsoft Entra ID y Google Workspace...');
+        setTimeout(() => {
+          syncBtn.classList.remove('opacity-50', 'pointer-events-none');
+          showToast('Sincronización completada: 148 identidades federadas activas.');
+        }, 1200);
+      });
+    }
+
+    const exportBtn = document.getElementById('export-csv-btn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        showToast('Generando nómina de auditoría federada (CSV seguro)...');
+      });
+    }
+
+    const configCatalogBtn = document.getElementById('config-catalog-btn');
+    if (configCatalogBtn) {
+      configCatalogBtn.addEventListener('click', () => {
+        showToast('Abriendo panel de gobernanza de líneas CONCYTEC...');
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-default shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="w-full max-w-[1440px] mx-auto px-space-lg py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md font-body-sm text-body-sm"><a class="hover:text-secondary transition-colors" href="#">Mesa de Ayuda</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Normativas Académicas</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Términos de Servicio</a><span class="text-outline-variant">•</span><a class="hover:text-secondary transition-colors" href="#">Aviso Legal &amp; Privacidad</a></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-success-bg font-tech-code text-tech-code text-success-text uppercase tracking-wider"><span class="w-1.5 h-1.5 rounded-full bg-success-icon inline-block"></span>WCAG 2.1 AAA</div><span class="font-tech-code text-tech-code text-outline">© 2025 Vicerrectorado de Investigación - DGI</span></div></div></footer></div></body></html>

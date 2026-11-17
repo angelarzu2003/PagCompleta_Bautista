@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Acceso Institucional - Plataforma URPMP</title><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.step-transition {
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); box-shadow: 0 14px 28px rgba(0, 81, 213, 0.35); }
+}
+.pulse-active {
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-sunken": "#f1f5f9",
+        "primary-container": "#071c37",
+        "surface-tint": "#4d5f7d",
+        "secondary-container": "#346cef",
+        "on-primary-fixed": "#071c37",
+        "on-tertiary": "#ffffff",
+        "danger-icon-container": "#fee2e2",
+        "surface-container-lowest": "#ffffff",
+        "on-secondary": "#ffffff",
+        "on-tertiary-fixed-variant": "#005137",
+        "primary": "#000000",
+        "on-error-container": "#93000a",
+        "inverse-on-surface": "#eaf1ff",
+        "success-icon": "#059669",
+        "on-secondary-fixed-variant": "#003ea7",
+        "bg-base": "#f8f9ff",
+        "warning-text": "#92400e",
+        "surface-variant": "#d3e4fe",
+        "background": "#f8f9ff",
+        "warning-bg": "#fffbeb",
+        "on-tertiary-container": "#069669",
+        "border-subtle": "#e2e8f0",
+        "surface-container": "#e5eeff",
+        "success-bg": "#ecfdf5",
+        "primary-fixed": "#d5e3ff",
+        "primary-fixed-dim": "#b5c7ea",
+        "on-background": "#0b1c30",
+        "tertiary": "#000000",
+        "on-secondary-container": "#fefcff",
+        "tertiary-fixed-dim": "#68dba9",
+        "outline": "#75777e",
+        "surface-container-highest": "#d3e4fe",
+        "inverse-surface": "#213145",
+        "on-primary-container": "#7284a5",
+        "tertiary-container": "#002114",
+        "surface-default": "#ffffff",
+        "surface": "#f8f9ff",
+        "on-primary-fixed-variant": "#354765",
+        "secondary-fixed": "#dbe1ff",
+        "on-secondary-fixed": "#00174b",
+        "error-container": "#ffdad6",
+        "inverse-primary": "#b5c7ea",
+        "danger-bg": "#fef2f2",
+        "danger-text": "#991b1b",
+        "on-surface-variant": "#44474d",
+        "outline-variant": "#c4c6ce",
+        "on-primary": "#ffffff",
+        "tertiary-fixed": "#85f8c4",
+        "success-text": "#065f46",
+        "danger-action": "#dc2626",
+        "warning-border": "#fde68a",
+        "on-tertiary-fixed": "#002114",
+        "surface-elevated": "#e2e8f0",
+        "surface-container-high": "#dce9ff",
+        "surface-container-low": "#eff4ff",
+        "secondary-fixed-dim": "#b4c5ff",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "surface-dim": "#cbdbf5",
+        "on-surface": "#0b1c30",
+        "on-error": "#ffffff",
+        "secondary": "#0051d5"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      fontFamily: {
+        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+        "tech-data-md": ["JetBrains Mono", "monospace"],
+        "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+        "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+        "tech-data-lg": ["JetBrains Mono", "monospace"],
+        "tech-code": ["JetBrains Mono", "monospace"],
+        "body-md": ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  }
+};</script></head><body class="bg-bg-base font-body-md text-on-surface antialiased overflow-x-hidden selection:bg-[#0051d5]/15 selection:text-[#00142f]"><!-- TOP INSTITUTIONAL NAVIGATION BAR -->
+<header class="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-[#00142f]/[0.06] shadow-[0_1px_8px_rgba(0,20,47,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00142f] to-[#0051d5] flex items-center justify-center text-white shadow-sm ring-2 ring-[#0051d5]/15"><span class="material-symbols-outlined text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-lg text-[#00142f] font-bold tracking-tight leading-snug">URPMP</span><span class="font-body-sm text-[12px] text-slate-500 hidden sm:inline">Plataforma de Gestión de Proyectos de Investigación</span></div></div><div class="flex items-center gap-6"><nav aria-label="Navegación principal" class="hidden md:flex items-center gap-2"><a class="px-4 py-2 font-body-md text-[14px] text-slate-600 hover:text-[#00142f] hover:bg-slate-100 rounded-lg transition-colors" href="#">Portal de Transparencia Universitaria</a><a aria-current="page" class="px-4 py-2 font-body-md text-[14px] font-semibold text-white bg-[#00142f] rounded-lg shadow-sm" href="#">Acceso Institucional</a><a class="px-4 py-2 font-body-md text-[14px] text-slate-600 hover:text-[#00142f] hover:bg-slate-100 rounded-lg transition-colors" href="#">Directorio de Investigación</a></nav><div class="flex items-center gap-3 pl-2 border-l border-slate-200"><div class="flex items-center gap-1.5 bg-[#F1F5F9] px-2.5 py-1 rounded-lg text-slate-700 text-xs font-semibold font-tech-code"><span class="material-symbols-outlined text-[15px] text-slate-500">language</span>ES</div><div class="w-8 h-8 rounded-full ring-2 ring-[#0051d5]/20 bg-gradient-to-tr from-slate-200 to-slate-100 flex items-center justify-center text-[#00142f] text-xs font-semibold shadow-inner"><span class="material-symbols-outlined text-sm text-[#0051d5]">verified_user</span></div></div></div></div></header><main class="w-full pt-20 min-h-[calc(100vh-80px)] relative"><div class="relative w-full min-h-[calc(100vh-80px)] bg-gradient-to-b from-[#FFFFFF] via-[#FAFBFD] to-[#F1F5F9] py-14 px-4 sm:px-6 md:px-8 flex flex-col items-center justify-center overflow-hidden">
+<!-- Escudo / Marca de Agua URPMP (~600px, 3% opacidad) -->
+<div aria-hidden="true" class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 opacity-[0.03]">
+<svg class="w-[600px] h-[600px] text-[#00142f]" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4zm0 2.18l7 3.12v4.7c0 4.54-3.12 8.78-7 9.88-3.88-1.1-7-5.34-7-9.88V7.3l7-3.12zM11 7h2v6h-2V7zm0 8h2v2h-2v-2z"></path>
+<circle cx="12" cy="12" fill="none" r="7.5" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.2"></circle>
+</svg>
+</div>
+<!-- TARJETA MADRE (THE GLASS CARD - 32px Corner Radius) -->
+<div class="relative z-10 w-full max-w-[620px] bg-white/[0.96] backdrop-blur-md rounded-[32px] border-[1.5px] border-[#00142f]/[0.08] shadow-[0_8px_20px_rgba(0,20,47,0.04),0_24px_56px_rgba(0,20,47,0.08)] p-7 sm:p-10 md:p-[60px] transition-all duration-300">
+<!-- ============================================== -->
+<!-- PASO 1: PORTAL DE IDENTIDAD UNIVERSITARIA       -->
+<!-- ============================================== -->
+<div class="step-transition opacity-100 scale-100 flex flex-col gap-9" id="step-1">
+<!-- Header Paso 1 -->
+<div class="flex flex-col items-center text-center gap-4">
+<!-- Isotipo institucional dentro de un círculo de vidrio -->
+<div class="w-16 h-16 rounded-full bg-[#F1F5F9]/90 border border-slate-200/80 shadow-[0_4px_12px_rgba(0,20,47,0.06)] flex items-center justify-center text-[#00142f] shrink-0 ring-4 ring-[#0051d5]/10">
+<span class="material-symbols-outlined text-[32px] text-[#0051d5]" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h1 class="font-headline-lg text-[28px] font-bold text-[#00142f] tracking-tight leading-tight">Bienvenido al Ecosistema URPMP</h1>
+<p class="font-body-md text-[16px] font-medium text-slate-500">Seleccione su puerta de acceso institucional para comenzar</p>
+</div>
+</div>
+<!-- Selectores SSO (Auto Layout Vertical, gap 16px, h-[72px]) -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<span class="text-[11px] font-tech-code uppercase tracking-wider text-slate-500 font-semibold">Puertas de Enlace Federado</span>
+<span class="inline-flex items-center gap-1.5 text-[11px] font-tech-code text-[#0051d5] bg-[#eff6ff] px-2.5 py-0.5 rounded-full border border-[#0051d5]/20 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0051d5] animate-pulse"></span> SSO OIDC / SAML 2.0
+          </span>
+</div>
+<!-- Botón 1: Microsoft Entra ID -->
+<button aria-label="Ingresar con Microsoft Entra ID" class="group w-full h-[72px] px-6 rounded-2xl sm:rounded-full border border-[#E2E8F0] bg-white hover:bg-[#F8F9FF] hover:border-[#0051D5] hover:shadow-[0_8px_20px_rgba(0,81,213,0.12)] text-[#00142f] flex items-center justify-between transition-all duration-200 active:scale-[0.99] text-left focus:outline-none focus:ring-2 focus:ring-[#0051d5]/40" onclick="selectProviderAndAdvance('Microsoft Entra ID', 'roberto.mendoza@urpmp.edu.pe')" type="button">
+<div class="flex items-center gap-4 min-w-0">
+<div class="w-7 h-7 flex items-center justify-center shrink-0">
+<svg class="w-full h-full" fill="none" viewBox="0 0 21 21">
+<rect fill="#F25022" height="9" width="9" x="1" y="1"></rect>
+<rect fill="#7FBA00" height="9" width="9" x="11" y="1"></rect>
+<rect fill="#00A4EF" height="9" width="9" x="1" y="11"></rect>
+<rect fill="#FFB900" height="9" width="9" x="11" y="11"></rect>
+</svg>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-headline-sm text-[15px] font-bold text-[#00142f] group-hover:text-[#0051d5] transition-colors">Microsoft Entra ID</span>
+<span class="font-tech-code text-[12px] text-slate-500 truncate">cuenta institucional @urpmp.edu.pe</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#00142f] opacity-30 group-hover:opacity-100 group-hover:text-[#0051d5] group-hover:translate-x-1 transition-all duration-200 shrink-0 text-2xl ml-2">chevron_right</span>
+</button>
+<!-- Botón 2: Google Workspace Institucional -->
+<button aria-label="Ingresar con Google Workspace Institucional" class="group w-full h-[72px] px-6 rounded-2xl sm:rounded-full border border-[#E2E8F0] bg-white hover:bg-[#F8F9FF] hover:border-[#0051D5] hover:shadow-[0_8px_20px_rgba(0,81,213,0.12)] text-[#00142f] flex items-center justify-between transition-all duration-200 active:scale-[0.99] text-left focus:outline-none focus:ring-2 focus:ring-[#0051d5]/40" onclick="selectProviderAndAdvance('Google Workspace', 'investigacion@urpmp.edu.pe')" type="button">
+<div class="flex items-center gap-4 min-w-0">
+<div class="w-7 h-7 flex items-center justify-center shrink-0">
+<svg class="w-full h-full" viewBox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-headline-sm text-[15px] font-bold text-[#00142f] group-hover:text-[#0051d5] transition-colors">Google Workspace Institucional</span>
+<span class="font-tech-code text-[12px] text-slate-500 truncate">nodo federado @urpmp.edu.pe</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#00142f] opacity-30 group-hover:opacity-100 group-hover:text-[#0051d5] group-hover:translate-x-1 transition-all duration-200 shrink-0 text-2xl ml-2">chevron_right</span>
+</button>
+<!-- Botón 3: SAML 2.0 / eduGAIN / SIR -->
+<button aria-label="Ingresar con Federación SIR o SAML 2.0" class="group w-full h-[72px] px-6 rounded-2xl sm:rounded-full border border-[#E2E8F0] bg-white hover:bg-[#F8F9FF] hover:border-[#0051D5] hover:shadow-[0_8px_20px_rgba(0,81,213,0.12)] text-[#00142f] flex items-center justify-between transition-all duration-200 active:scale-[0.99] text-left focus:outline-none focus:ring-2 focus:ring-[#0051d5]/40" onclick="selectProviderAndAdvance('Federación SIR / SAML 2.0', 'idp.sir.rediris.es')" type="button">
+<div class="flex items-center gap-4 min-w-0">
+<div class="w-7 h-7 flex items-center justify-center shrink-0 text-[#00142f] group-hover:text-[#0051d5] transition-colors">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-headline-sm text-[15px] font-bold text-[#00142f] group-hover:text-[#0051d5] transition-colors">Federación SIR / SAML 2.0</span>
+<span class="font-tech-code text-[12px] text-slate-500 truncate">eduGAIN &amp; red de investigación interuniversitaria</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#00142f] opacity-30 group-hover:opacity-100 group-hover:text-[#0051d5] group-hover:translate-x-1 transition-all duration-200 shrink-0 text-2xl ml-2">chevron_right</span>
+</button>
+</div>
+<!-- Toque Humano y Soporte -->
+<div class="pt-2 flex flex-col items-center gap-3 text-center border-t border-slate-100">
+<p class="font-body-sm text-[13px] text-slate-500">
+          ¿No tiene cuenta institucional o requiere activación docente?
+        </p>
+<button class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0051d5] hover:underline hover:text-[#003ea7] transition-colors" onclick="openDrawer('soporte')" type="button">
+<span>Contacte a Mesa de Ayuda Técnica</span>
+<span class="material-symbols-outlined text-[15px]">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- PASO 2: EL "VAULT" DE COMPROMISO ÉTICO          -->
+<!-- ============================================== -->
+<div class="step-transition hidden opacity-0 scale-95 flex-col gap-7" id="step-2">
+<!-- Asimetría Controlada y Header Dinámico -->
+<div class="flex flex-col gap-4">
+<!-- User Badge superior alineado a la izquierda para romper simetría rígida -->
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="inline-flex items-center gap-2.5 py-1.5 px-3.5 rounded-full bg-[#eff6ff] border border-[#0051d5]/25 text-[#00142f] shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-emerald-200 animate-pulse"></span>
+<div class="flex items-center gap-1.5 text-[12px]">
+<span class="font-medium text-slate-600">Verificado como:</span>
+<strong class="font-bold text-[#00142f]">Dr. Roberto Mendoza</strong>
+<span class="text-slate-400 hidden sm:inline">·</span>
+<span class="font-tech-code text-[11px] text-[#0051d5] hidden sm:inline">Inv. Principal (DNI: ***.***.342)</span>
+</div>
+</div>
+<button class="text-[12px] font-semibold text-slate-500 hover:text-[#0051d5] transition-colors flex items-center gap-1" onclick="goToStep1()" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_back</span>
+<span>Cambiar de cuenta</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-md text-[24px] sm:text-[26px] font-bold text-[#00142f] tracking-tight leading-snug">
+            Compromiso Ético &amp; Declaración Jurada
+          </h2>
+<p class="font-body-md text-[14px] text-slate-500 leading-relaxed">
+            Revisión vinculante previa a la emisión del token criptográfico de sesión en bitácora inmutable.
+          </p>
+</div>
+</div>
+<!-- Consent Cards (Auto Layout Vertical, gap 20px) -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<span class="text-[11px] font-tech-code uppercase tracking-wider text-slate-500 font-semibold">Declaraciones Vinculantes Obligatorias</span>
+<span class="text-[11px] font-tech-code text-slate-400">RESOLUCIÓN URPMP-DGI-2024</span>
+</div>
+<!-- Cláusula 1: Compromiso de Integridad y Confidencialidad -->
+<div class="group cursor-pointer p-5 rounded-2xl border border-slate-200 bg-[#F8F9FF] hover:border-[#0051d5]/50 transition-all duration-200 flex items-start gap-4 select-none" id="clause-card-1" onclick="toggleClause(1)">
+<!-- Checkbox personalizado 24px con esquinas 8px -->
+<div class="w-6 h-6 mt-0.5 rounded-[8px] border-2 border-slate-300 group-hover:border-[#0051d5] flex items-center justify-center shrink-0 transition-all duration-200 bg-white" id="check-box-1">
+<span class="material-symbols-outlined text-white text-[16px] hidden font-bold">check</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<strong class="font-bold text-[14px] text-[#00142f] tracking-tight">Compromiso de Integridad y Confidencialidad</strong>
+<span class="text-[11px] font-tech-code text-slate-400">ART. 14°</span>
+</div>
+<p class="font-body-sm text-[12px] leading-relaxed text-slate-500">
+              Declaro bajo juramento no incurrir en conflicto de intereses ni transferir credenciales institucionales, asumiendo responsabilidad civil, administrativa y académica sobre los proyectos custodiados.
+            </p>
+<div class="pt-1">
+<button class="inline-flex items-center gap-1 text-[12px] font-semibold text-[#0051d5] hover:text-[#003ea7] hover:underline" onclick="event.stopPropagation(); openDrawer('etica')" type="button">
+<span>Leer documento completo</span>
+<span class="material-symbols-outlined text-[13px]">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cláusula 2: Tratamiento de Datos y Trazabilidad Auditora -->
+<div class="group cursor-pointer p-5 rounded-2xl border border-slate-200 bg-[#F8F9FF] hover:border-[#0051d5]/50 transition-all duration-200 flex items-start gap-4 select-none" id="clause-card-2" onclick="toggleClause(2)">
+<!-- Checkbox personalizado 24px con esquinas 8px -->
+<div class="w-6 h-6 mt-0.5 rounded-[8px] border-2 border-slate-300 group-hover:border-[#0051d5] flex items-center justify-center shrink-0 transition-all duration-200 bg-white" id="check-box-2">
+<span class="material-symbols-outlined text-white text-[16px] hidden font-bold">check</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<strong class="font-bold text-[14px] text-[#00142f] tracking-tight">Tratamiento de Datos y Trazabilidad Auditora</strong>
+<span class="text-[11px] font-tech-code text-slate-400">ART. 22°</span>
+</div>
+<p class="font-body-sm text-[12px] leading-relaxed text-slate-500">
+              Autorizo el tratamiento de mis datos e insumos de investigación para fines de rendición de fondos públicos, auditoría rectoral y estampillado de tiempo TSA con Código de Verificación Digital (CVD).
+            </p>
+<div class="pt-1">
+<button class="inline-flex items-center gap-1 text-[12px] font-semibold text-[#0051d5] hover:text-[#003ea7] hover:underline" onclick="event.stopPropagation(); openDrawer('privacidad')" type="button">
+<span>Leer documento completo</span>
+<span class="material-symbols-outlined text-[13px]">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- La "Cámara de Firma" (Área del Botón CTA - pt-8 / 32px) -->
+<div class="pt-8 flex flex-col items-center gap-5">
+<!-- Botón Primario: Azul vibrante (#0051D5), Corner Radius 16px -->
+<button aria-live="polite" class="w-full py-4 px-8 rounded-2xl bg-[#0051D5] text-white font-semibold text-[15px] flex items-center justify-center gap-3 shadow-[0px_10px_20px_rgba(0,81,213,0.25)] opacity-40 cursor-not-allowed transition-all duration-200 focus:outline-none" disabled="" id="btn-final-vault" onclick="executeDigitalSignature()" type="button">
+<span class="material-symbols-outlined text-xl" id="btn-vault-icon">lock</span>
+<span class="tracking-tight" id="btn-vault-text">Firma Digital Pendiente...</span>
+</button>
+<!-- Tipografía Técnica y Micro-Trazabilidad -->
+<div class="w-full text-center">
+<p class="font-tech-code text-[11px] text-slate-400 tracking-tight leading-relaxed select-all">
+            HASH-ID: 8F10-E7A4-9C21-6597 · CVD: URP-9482-TX-2024 · TSA TIMESTAMP COMPLIANT
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SIDE DRAWER ACCESIBLE (DOCUMENTO COMPLETO / DIRECTIVA INSTITUCIONAL) -->
+<div aria-labelledby="drawer-title" aria-modal="true" class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="side-drawer" role="dialog">
+<!-- Backdrop Blur -->
+<div class="absolute inset-0 bg-[#00142f]/40 backdrop-blur-sm transition-opacity" id="drawer-backdrop" onclick="closeDrawer()"></div>
+<!-- Off-Canvas Sheet -->
+<div class="absolute top-0 right-0 h-full w-full max-w-lg bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col pointer-events-auto" id="drawer-panel">
+<!-- Header Drawer -->
+<div class="p-6 border-b border-slate-200 flex items-center justify-between bg-[#F8F9FF]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-[#0051d5]/10 text-[#0051d5] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-base font-bold text-[#00142f]" id="drawer-title">Resolución Rectoral URPMP-DGI-2024</h3>
+<p class="text-xs text-slate-500 font-tech-code">CÓDIGO DE ÉTICA Y AUDITORÍA DIGITAL</p>
+</div>
+</div>
+<button aria-label="Cerrar panel lateral" class="p-2 rounded-xl text-slate-400 hover:text-[#00142f] hover:bg-slate-200/60 transition-colors" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<!-- Body Scrollable Content -->
+<div class="p-6 overflow-y-auto space-y-6 text-[13px] text-slate-600 leading-relaxed font-body-md">
+<div class="p-3.5 bg-blue-50/60 rounded-xl border border-blue-100 text-[#0051d5] flex items-center gap-2 font-tech-code text-xs">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>Documento oficial refrendado por el Vicerrectorado de Investigación.</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-bold text-[#00142f] text-sm">Artículo 14° - Integridad, Confidencialidad y Propiedad Intelectual</h4>
+<p>Todo investigador activo dentro del Ecosistema URPMP asume el deber indelegable de velar por el rigor metodológico, la autenticidad de los datos empíricos recolectados y la custodia de los secretos industriales o patentes generadas en el marco de proyectos con fondos concursables.</p>
+<p>Queda expresamente prohibida la divulgación de credenciales federadas y el acceso simultáneo no autorizado. La vulneración tipifica falta muy grave sujeta a sanción disciplinaria y cancelación de subsidios.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-bold text-[#00142f] text-sm">Artículo 22° - Trazabilidad y Sello de Tiempo Cualificado (TSA)</h4>
+<p>Cada interacción, modificación presupuestaria, aprobación de hito o descarga de base de datos queda asentada en una bitácora criptográfica inmutable vinculada al Código de Verificación Digital (CVD). El docente o investigador consiente que estas huellas sean examinadas periódicamente por la Contraloría Interna de la Universidad.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-bold text-[#00142f] text-sm">Disposición Complementaria Única</h4>
+<p>La pulsación del botón de validación en la plataforma constituye firma electrónica avanzada en los términos estipulados por la ley de firmas y certificados digitales vigente para entidades académicas y de educación superior.</p>
+</div>
+</div>
+<!-- Footer Drawer -->
+<div class="p-5 border-t border-slate-200 bg-white flex items-center justify-between">
+<span class="font-tech-code text-[11px] text-slate-400">EXP: 2024-VRINV-9941</span>
+<button class="px-5 py-2.5 rounded-xl bg-[#00142f] text-white text-xs font-semibold hover:bg-slate-800 transition-colors" onclick="closeDrawer()" type="button">
+        Entendido y Volver
+      </button>
+</div>
+</div>
+</div>
+</main><!-- FOOTER DE CUMPLIMIENTO NORMATIVO Y ACCESIBILIDAD WCAG 2.1 AAA -->
+<footer class="w-full bg-white border-t border-slate-200/80 shadow-[0_-1px_6px_rgba(0,20,47,0.03)]"><div class="max-w-7xl mx-auto px-6 md:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex flex-wrap items-center justify-center gap-3 text-center sm:text-left"><span class="inline-flex items-center gap-1.5 bg-[#F1F5F9] px-3 py-1 rounded-full text-[#00142f] font-tech-code text-[11px] font-semibold border border-slate-200"><span class="material-symbols-outlined text-emerald-600 text-sm">verified</span>WCAG 2.1 AAA CERTIFIED</span><span class="font-body-sm text-[12px] text-slate-500">© 2025 Universidad Regional Politécnica y de Posgrado. Todos los derechos reservados.</span></div><nav aria-label="Enlaces legales de pie de página" class="flex flex-wrap items-center justify-center gap-4 font-body-sm text-[12px] text-slate-500"><a class="hover:text-[#0051d5] transition-colors" href="#">Mesa de Ayuda</a><span class="text-slate-300">•</span><a class="hover:text-[#0051d5] transition-colors" href="#">Normativas Académicas</a><span class="text-slate-300">•</span><a class="hover:text-[#0051d5] transition-colors" href="#">Términos de Servicio</a><span class="text-slate-300">•</span><a class="hover:text-[#0051d5] transition-colors" href="#">Aviso Legal &amp; Privacidad</a></nav></div></footer><!-- SCRIPT DE INTERACTIVIDAD TOTAL (FLOW SMART ANIMATE, CHECKBOXES, DRAWER & CTA) -->
+<script>
+  // Estado de cláusulas
+  var clausesState = {
+    1: false,
+    2: false
+  };
+
+  var selectedSSO = "Microsoft Entra ID";
+
+  // Transición Fluida: Paso 1 -> Paso 2 (Smart Animate Flow)
+  function selectProviderAndAdvance(providerName, userEmail) {
+    selectedSSO = providerName;
+    var step1 = document.getElementById('step-1');
+    var step2 = document.getElementById('step-2');
+
+    // Animación de encogimiento y fade out del Paso 1
+    step1.classList.remove('opacity-100', 'scale-100');
+    step1.classList.add('opacity-0', 'scale-95');
+
+    setTimeout(function() {
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+
+      // Ligero delay para que el render aplique antes de animar entrada
+      setTimeout(function() {
+        step2.classList.remove('opacity-0', 'scale-95');
+        step2.classList.add('opacity-100', 'scale-100');
+      }, 30);
+    }, 320);
+  }
+
+  // Volver al Paso 1
+  function goToStep1() {
+    var step1 = document.getElementById('step-1');
+    var step2 = document.getElementById('step-2');
+
+    step2.classList.remove('opacity-100', 'scale-100');
+    step2.classList.add('opacity-0', 'scale-95');
+
+    setTimeout(function() {
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+
+      setTimeout(function() {
+        step1.classList.remove('opacity-0', 'scale-95');
+        step1.classList.add('opacity-100', 'scale-100');
+      }, 30);
+    }, 320);
+  }
+
+  // Toggle de Consentimiento con micro-animación en checkboxes
+  function toggleClause(id) {
+    clausesState[id] = !clausesState[id];
+
+    var card = document.getElementById('clause-card-' + id);
+    var box = document.getElementById('check-box-' + id);
+    if (!card || !box) return;
+
+    var icon = box.querySelector('.material-symbols-outlined');
+
+    if (clausesState[id]) {
+      // Estado Activo
+      card.className = 'group cursor-pointer p-5 rounded-2xl border-2 border-[#0051d5] bg-gradient-to-r from-[#eff6ff] to-[#e0edff] transition-all duration-200 flex items-start gap-4 select-none shadow-sm';
+      box.className = 'w-6 h-6 mt-0.5 rounded-[8px] bg-[#0051d5] border-2 border-[#0051d5] flex items-center justify-center shrink-0 transition-all duration-200 text-white transform scale-105';
+      if (icon) icon.classList.remove('hidden');
+    } else {
+      // Estado Inactivo
+      card.className = 'group cursor-pointer p-5 rounded-2xl border border-slate-200 bg-[#F8F9FF] hover:border-[#0051d5]/50 transition-all duration-200 flex items-start gap-4 select-none';
+      box.className = 'w-6 h-6 mt-0.5 rounded-[8px] border-2 border-slate-300 group-hover:border-[#0051d5] flex items-center justify-center shrink-0 transition-all duration-200 bg-white transform scale-100';
+      if (icon) icon.classList.add('hidden');
+    }
+
+    evalVaultLockState();
+  }
+
+  // Evaluación de la Cámara de Firma CTA
+  function evalVaultLockState() {
+    var btn = document.getElementById('btn-final-vault');
+    var icon = document.getElementById('btn-vault-icon');
+    var text = document.getElementById('btn-vault-text');
+    if (!btn || !icon || !text) return;
+
+    if (clausesState[1] && clausesState[2]) {
+      // Desbloqueado y Activo
+      btn.disabled = false;
+      btn.className = 'pulse-active w-full py-4 px-8 rounded-2xl bg-[#0051D5] hover:bg-[#003ea7] text-white font-semibold text-[15px] flex items-center justify-center gap-3 shadow-[0px_10px_24px_rgba(0,81,213,0.35)] opacity-100 cursor-pointer transition-all duration-200 transform active:scale-[0.99]';
+      icon.textContent = 'verified_user';
+      text.textContent = 'Confirmar Acceso e Ingresar · Sello TSA';
+    } else {
+      // Bloqueado
+      btn.disabled = true;
+      btn.className = 'w-full py-4 px-8 rounded-2xl bg-[#0051D5] text-white font-semibold text-[15px] flex items-center justify-center gap-3 shadow-[0px_10px_20px_rgba(0,81,213,0.25)] opacity-40 cursor-not-allowed transition-all duration-200';
+      icon.textContent = 'lock';
+      text.textContent = 'Firma Digital Pendiente...';
+    }
+  }
+
+  // Acción Final de Firma Digital
+  function executeDigitalSignature() {
+    var btn = document.getElementById('btn-final-vault');
+    var icon = document.getElementById('btn-vault-icon');
+    var text = document.getElementById('btn-vault-text');
+    if (!btn || btn.disabled) return;
+
+    btn.disabled = true;
+    btn.classList.remove('pulse-active');
+    icon.textContent = 'hourglass_top';
+    icon.classList.add('animate-spin');
+    text.textContent = 'Validando huella criptográfica en TSA...';
+
+    setTimeout(function() {
+      icon.classList.remove('animate-spin');
+      icon.textContent = 'task_alt';
+      text.textContent = '¡Firma Registrada! Ingresando al Sistema...';
+      btn.className = 'w-full py-4 px-8 rounded-2xl bg-emerald-600 text-white font-semibold text-[15px] flex items-center justify-center gap-3 shadow-[0px_10px_24px_rgba(5,150,105,0.35)] opacity-100 cursor-default transition-all duration-200';
+      
+      setTimeout(function() {
+        alert('Acceso autorizado para el Dr. Roberto Mendoza. Bitácora inmutable sellada bajo CVD: URP-9482-TX-2024.');
+      }, 500);
+    }, 1100);
+  }
+
+  // Side Drawer
+  function openDrawer(type) {
+    var drawer = document.getElementById('side-drawer');
+    var panel = document.getElementById('drawer-panel');
+    if (!drawer || !panel) return;
+
+    drawer.classList.remove('pointer-events-none', 'opacity-0');
+    drawer.classList.add('pointer-events-auto', 'opacity-100');
+    panel.classList.remove('translate-x-full');
+    panel.classList.add('translate-x-0');
+  }
+
+  function closeDrawer() {
+    var drawer = document.getElementById('side-drawer');
+    var panel = document.getElementById('drawer-panel');
+    if (!drawer || !panel) return;
+
+    panel.classList.remove('translate-x-0');
+    panel.classList.add('translate-x-full');
+    drawer.classList.remove('opacity-100');
+    drawer.classList.add('opacity-0');
+
+    setTimeout(function() {
+      drawer.classList.remove('pointer-events-auto');
+      drawer.classList.add('pointer-events-none');
+    }, 300);
+  }
+
+  // Cerrar drawer con tecla ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDrawer();
+    }
+  });
+</script></body></html>
